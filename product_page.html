@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- custom css link -->
     <link rel="stylesheet" href="product_page.css" />
-    <!-- link to box icon -->
+    <!-- link to bootstrap icon -->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
     />
     <!-- link to google font quick sand -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,39 +18,81 @@
       rel="stylesheet"
     />
 
+    <script src="index.js" async></script>
     <title>product page</title>
   </head>
   <body>
     <!-- body start -->
+    <!-- header/navbar here -->
+    <header>
+      <div class="container">
+        <p class="header">Navbar</p>
+      </div>
+    </header>
+
     <!-- product (section 1) -->
-    <section id="product__purchase">
+    <section id="product-purchase">
       <div class="container">
         <!-- product section container -->
         <div class="product-container">
           <div class="product-images">
             <!-- large image -->
             <div class="large-image-container">
-              <img src="" alt="" />
+              <img class="visible"
+                src="assets/product-image/Nebulizers/Smart_Nebulizer_D-77/Nubilizer.png"
+                alt=""
+              />
+              <img
+                src="assets/product-image/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_2.png"
+                alt=""
+              />
+              <img
+                src="assets/product-image/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_3.png"
+                alt=""
+              />
               <button class="add-wishlist absolute">
-                <i class="bx bx-heart"></i>
+                <i class="bi bi-heart"></i>
               </button>
               <button class="expand absolute">
-                <i class="bx bx-expand"></i>
+                <i class="bi bi-arrows-fullscreen"></i>
               </button>
             </div>
             <!-- small images -->
             <div class="small-image-container">
-              <button class="small-image active"><img src="" alt="" /></button>
-              <button class="small-image"><img src="" alt="" /></button>
-              <button class="small-image"><img src="" alt="" /></button>
-              <button class="small-image"><img src="" alt="" /></button>
+              <button class="small-image active">
+                <img
+                  src="assets/product-image/Nebulizers/Smart_Nebulizer_D-77/Nubilizer.png"
+                  alt=""
+                />
+              </button>
+              <button class="small-image">
+                <img
+                  src="assets/product-image/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_2.png"
+                  alt=""
+                />
+              </button>
+
+              <button class="small-image">
+                <img
+                  src="assets/product-image/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_3.png"
+                  alt=""
+                />
+              </button>
+              <button class="small-image">
+                <img
+                  src="assets/product-image/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_2.png"
+                  alt=""
+                />
+              </button>
             </div>
           </div>
           <!-- product description -->
           <div class="product-description">
-            <h2>Product Name</h2>
+            <h2>Nebulizers</h2>
             <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Breathe easier with our Nebulizer. Delivering medication as a fine
+              mist, it provides direct relief for respiratory conditions like
+              asthma and COPD.
             </p>
             <span class="discount"
               ><p>10%</p>
@@ -63,13 +105,13 @@
             <!-- review -->
             <div class="review">
               <div class="stars">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star-half"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
               </div>
-              <a href="" class="review-count">441 Reviews</a>
+              <a href="#reviews" class="review-count">441 Reviews</a>
             </div>
             <!-- color switcher -->
             <div class="flex-col color">
@@ -112,20 +154,21 @@
     <section id="product-details">
       <div class="container">
         <div class="product-details-tab-container">
+            <!-- tab buttons -->
           <div class="product-tab-buttons">
-            <button class="tab-btn active">Detailed Information</button>
-            <button class="tab-btn">Dimensions</button>
-            <button class="tab-btn">Popular Configuration</button>
+            <button class="tab-btn active" data-tab-target="#detail-info">Detailed Information</button>
+            <button class="tab-btn" data-tab-target="#dimension">Dimensions</button>
+            <button class="tab-btn" data-tab-target="#popular-config"> Popular Configuration</button>
           </div>
+
+          <!-- tab contents -->
           <div class="tab-content-container">
-            <div class="tab-content" id="detail-info">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              dignissimos?
+            <div class="tab-content active" id="detail-info">
+                User-friendly features like intuitive controls, adjustable airflow settings, and noise reduction technology make nebulizers easy to use and comfortable for individuals seeking respiratory relief.
             </div>
-            <div class="tab-content" id="dimension" lorem10></div>
+            <div class="tab-content" id="dimension">Compact and portable, nebulizers come in various sizes to suit different needs. From handheld units to tabletop models, their dimensions are designed for convenience and mobility.</div>
             <div class="tab-content" id="popular-config">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum,
-              perspiciatis.
+                Handheld, tabletop, and portable nebulizer kits are the popular configurations available, offering portability, stability, and flexibility in managing respiratory conditions.
             </div>
           </div>
         </div>
@@ -143,64 +186,56 @@
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
           </div>
         </div>
       </div>
@@ -218,11 +253,11 @@
               <div>
                 <span class="large">4.5</span>
                 <div class="stars">
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star-half"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
               </div>
               <p class="underline">
@@ -230,19 +265,21 @@
               </p>
             </div>
             <button class="add-review btn">Write a review</button>
+            <!-- review form -->
             <div class="add-review-container">
-              <form action="" class="add-review-form">
+                
+              <form action="" class="add-review-form"><span class="close-review"><i class="bi bi-x"></i></span>
                 <div class="user-details flex-row">
                   <div class="letter"><p>T</p></div>
                   <p class="name">Maja Salvador</p>
                 </div>
                 <h2>Rate your experince</h2>
                 <div class="stars">
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star-half"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
                 <textarea
                   name=""
@@ -264,11 +301,11 @@
             <div class="rating-content flex-col">
               <div class="rating">
                 <div>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star-half"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
                 <p class="date-rated">September 14, 2023</p>
               </div>
@@ -288,11 +325,11 @@
             <div class="rating-content flex-col">
               <div class="rating">
                 <div>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star-half"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
                 <p class="date-rated">September 14, 2023</p>
               </div>
@@ -312,11 +349,11 @@
             <div class="rating-content flex-col">
               <div class="rating">
                 <div>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star-half"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
                 <p class="date-rated">September 14, 2023</p>
               </div>
@@ -336,11 +373,11 @@
             <div class="rating-content flex-col">
               <div class="rating">
                 <div>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star-half"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
                 <p class="date-rated">September 14, 2023</p>
               </div>
@@ -360,11 +397,11 @@
             <div class="rating-content flex-col">
               <div class="rating">
                 <div>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star-half"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
                 <p class="date-rated">September 14, 2023</p>
               </div>
@@ -384,11 +421,11 @@
             <div class="rating-content flex-col">
               <div class="rating">
                 <div>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star-half"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
                 <p class="date-rated">September 14, 2023</p>
               </div>
@@ -408,11 +445,11 @@
             <div class="rating-content flex-col">
               <div class="rating">
                 <div>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star-half"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
                 <p class="date-rated">September 14, 2023</p>
               </div>
@@ -432,38 +469,11 @@
             <div class="rating-content flex-col">
               <div class="rating">
                 <div>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star-half"></i>
-                </div>
-                <p class="date-rated">September 14, 2023</p>
-              </div>
-              <p class="rating-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-                corrupti repellendus velit odit incidunt officiis ratione
-                tempora in! Nulla voluptatibus eos recusandae nobis quasi amet
-                deserunt veniam placeat suscipit ab?
-              </p>
-            </div>
-            <a href="" class="see-more link"
-              >See More&nbsp;<i class="bx bx-right-arrow-alt"></i
-            ></a>
-          </div>
-          <div class="rating-review-box flex-col">
-            <div class="user-details flex-row">
-              <div class="letter">T</div>
-              <p class="name">Maja Salvador</p>
-            </div>
-            <div class="rating-content flex-col">
-              <div class="rating">
-                <div>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star-half"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
                 <p class="date-rated">September 14, 2023</p>
               </div>
@@ -475,6 +485,8 @@
               </p>
             </div>
           </div>
+          <a href="" class="see-more link"
+            >See All Reviews</a>
         </div>
       </div>
     </section>
@@ -484,6 +496,7 @@
     <section id="privacy-policy">
       <div class="container">
         <p class="header">Policy and piracy</p>
+        <br />
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore,
           consequatur. Soluta rerum neque mollitia non nesciunt eum eius, vel
