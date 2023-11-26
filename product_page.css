@@ -27,6 +27,8 @@
     scroll-behavior: smooth;
     color: var(--text-color);
     font-family: 'Quicksand', sans-serif;
+    list-style: none;
+    text-decoration: none;
   }
 
   h2{
@@ -452,6 +454,84 @@ border-top-right-radius: 12px;
 .discount{
     color: red;
 }
+
+/* footer */
+footer a{
+  font-size: 14px;    
+}
+      footer h3{
+  font-size: 16px;    
+}
+footer a:hover, footer a:active{
+  color: var(--primary-blue);
+}
+hr{
+  height: 1px;
+  background-color: var(--grey-border-color);
+  margin-block: 1rem;
+  gap: 1rem;
+}
+.footer-container{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.bold{
+  font-weight: 600;
+}
+
+.footer-intro .form-group{
+  gap: 0px;
+  height: fit-content;
+  max-width: 300px;
+}
+.footer-intro .form-group input{
+border: 1px solid var(--grey-border-color);
+padding: 6px;
+border-top-left-radius: 6px;
+border-bottom-left-radius: 6px;
+font-size: 14px;
+}
+.footer-intro .form-group button{
+padding: 6px;
+border-radius: 0px;
+border-top-right-radius: 6px;
+border-bottom-right-radius: 6px;
+font-size: 14px;
+}
+.footer-intro .social-links{
+display: flex;
+justify-content: center;
+gap: 10px;
+width: fit-content;
+margin: auto;
+}
+.footer-intro .social-links i{
+font-size: 20px;
+color: var(--text-color);
+}
+.footer-intro .social-links i:hover{
+  transition: 0s;
+color: var(--primary-blue);
+}
+.footer-content{
+  gap: 1rem;
+  min-width: 100px;
+  max-width: 220px;
+
+}
+.footer-content.contact li{
+gap: 1rem;
+align-items: center;
+font-size: 1rem;
+}
+
+.privacy-policy{
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 /* ================= media querries ============== */
 @media (max-width: 950px){
     .product-container{
@@ -494,4 +574,22 @@ border-top-right-radius: 12px;
     .rating-review-container{
         gap: 0px;
     }
+    .privacy-policy *{
+      font-size: 14px;
+    }
+.footer-content{
+  gap: 10px;
+}
+
+}
+
+
+
+
+
+.logo{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: var(--primary-blue);
 }
