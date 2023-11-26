@@ -18,7 +18,6 @@
       rel="stylesheet"
     />
 
-    <script src="index.js" async></script>
     <title>product page</title>
   </head>
   <body>
@@ -38,7 +37,8 @@
           <div class="product-images">
             <!-- large image -->
             <div class="large-image-container">
-              <img class="visible"
+              <img
+                class="visible"
                 src="assets/product-image/Nebulizers/Smart_Nebulizer_D-77/Nubilizer.png"
                 alt=""
               />
@@ -50,11 +50,12 @@
                 src="assets/product-image/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_3.png"
                 alt=""
               />
+              <img
+                src="assets/product-image/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_4.png"
+                alt=""
+              />
               <button class="add-wishlist absolute">
-                <i class="bi bi-heart"></i>
-              </button>
-              <button class="expand absolute">
-                <i class="bi bi-arrows-fullscreen"></i>
+                <i class="bi bi-heart-fill"></i>
               </button>
             </div>
             <!-- small images -->
@@ -80,7 +81,7 @@
               </button>
               <button class="small-image">
                 <img
-                  src="assets/product-image/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_2.png"
+                  src="assets/product-image/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_4.png"
                   alt=""
                 />
               </button>
@@ -144,6 +145,8 @@
               <button class="btn">Buy Now</button>
               <button class="btn btn-border">Add To Cart</button>
             </div>
+
+            <div class="accordion-container">div</div>
           </div>
         </div>
       </div>
@@ -154,21 +157,42 @@
     <section id="product-details">
       <div class="container">
         <div class="product-details-tab-container">
-            <!-- tab buttons -->
+          <!-- tab buttons -->
           <div class="product-tab-buttons">
-            <button class="tab-btn active" data-tab-target="#detail-info">Detailed Information</button>
-            <button class="tab-btn" data-tab-target="#dimension">Dimensions</button>
-            <button class="tab-btn" data-tab-target="#popular-config"> Popular Configuration</button>
+            <button class="tab-btn active" data-tab-target="#detail-info">
+              Detailed Information
+            </button>
+            <button class="tab-btn" data-tab-target="#dimension">
+              Dimensions
+            </button>
+            <button class="tab-btn" data-tab-target="#popular-config">
+              Popular Configuration
+            </button>
           </div>
 
           <!-- tab contents -->
           <div class="tab-content-container">
             <div class="tab-content active" id="detail-info">
-                User-friendly features like intuitive controls, adjustable airflow settings, and noise reduction technology make nebulizers easy to use and comfortable for individuals seeking respiratory relief.
+              <p>
+                User-friendly features like intuitive controls, adjustable
+                airflow settings, and noise reduction technology make nebulizers
+                easy to use and comfortable for individuals seeking respiratory
+                relief.
+              </p>
             </div>
-            <div class="tab-content" id="dimension">Compact and portable, nebulizers come in various sizes to suit different needs. From handheld units to tabletop models, their dimensions are designed for convenience and mobility.</div>
+            <div class="tab-content" id="dimension">
+              <p>
+                Compact and portable, nebulizers come in various sizes to suit
+                different needs. From handheld units to tabletop models, their
+                dimensions are designed for convenience and mobility.
+              </p>
+            </div>
             <div class="tab-content" id="popular-config">
-                Handheld, tabletop, and portable nebulizer kits are the popular configurations available, offering portability, stability, and flexibility in managing respiratory conditions.
+              <p>
+                Handheld, tabletop, and portable nebulizer kits are the popular
+                configurations available, offering portability, stability, and
+                flexibility in managing respiratory conditions.
+              </p>
             </div>
           </div>
         </div>
@@ -182,60 +206,80 @@
         <h2 class="header">Related Products</h2>
         <div class="related-products-container">
           <div class="related-product flex-col">
-            <div class="product-img"><img src="" alt="" /></div>
-            <h2 class="product-name">Hello</h2>
-            <p class="product-description">Hello</p>
+            <div class="product-img">
+              <img src="assets/product-image/Nebulizers/C28P/C28P.png" alt="" />
+            </div>
+            <h2 class="product-name">C28P</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
           </div>
           <div class="related-product flex-col">
-            <div class="product-img"><img src="" alt="" /></div>
-            <h2 class="product-name">Hello</h2>
-            <p class="product-description">Hello</p>
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/DuoBaby/DuoBaby.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">Nebulizer</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
+          </div>
+
+          <div class="related-product flex-col">
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/MicroAir_U100/MicroAir_U100.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">MicroAir_U100</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
+            <a href="" class="link"
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
           </div>
           <div class="related-product flex-col">
-            <div class="product-img"><img src="" alt="" /></div>
-            <h2 class="product-name">Hello</h2>
-            <p class="product-description">Hello</p>
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/MicroAir_U100/MicroAir_U100_3.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">MicroAir_U100</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
           </div>
           <div class="related-product flex-col">
-            <div class="product-img"><img src="" alt="" /></div>
-            <h2 class="product-name">Hello</h2>
-            <p class="product-description">Hello</p>
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/MicroAir_U100/MicroAir_U100_2.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">DuoBaby</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
           </div>
           <div class="related-product flex-col">
-            <div class="product-img"><img src="" alt="" /></div>
-            <h2 class="product-name">Hello</h2>
-            <p class="product-description">Hello</p>
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/DuoBaby/DuoBaby2.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">DuoBaby</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
-          </div>
-          <div class="related-product flex-col">
-            <div class="product-img"><img src="" alt="" /></div>
-            <h2 class="product-name">Hello</h2>
-            <p class="product-description">Hello</p>
-            <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp<i class="bi bi-chevron-right"></i></a>
-          </div>
-          <div class="related-product flex-col">
-            <div class="product-img"><img src="" alt="" /></div>
-            <h2 class="product-name">Hello</h2>
-            <p class="product-description">Hello</p>
-            <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i<i class="bi bi-chevron-right"></i></a>
-          </div>
-          <div class="related-product flex-col">
-            <div class="product-img"><img src="" alt="" /></div>
-            <h2 class="product-name">Hello</h2>
-            <p class="product-description">Hello</p>
-            <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -267,8 +311,8 @@
             <button class="add-review btn">Write a review</button>
             <!-- review form -->
             <div class="add-review-container">
-                
-              <form action="" class="add-review-form"><span class="close-review"><i class="bi bi-x"></i></span>
+              <form action="" class="add-review-form">
+                <span class="close-review"><i class="bi bi-x"></i></span>
                 <div class="user-details flex-row">
                   <div class="letter"><p>T</p></div>
                   <p class="name">Maja Salvador</p>
@@ -485,8 +529,7 @@
               </p>
             </div>
           </div>
-          <a href="" class="see-more link"
-            >See All Reviews</a>
+          <a href="" class="see-more link">See All Reviews</a>
         </div>
       </div>
     </section>
@@ -548,5 +591,8 @@
       </div>
     </footer>
     <!-- footer end -->
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
