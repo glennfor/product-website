@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fabrice.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="main_test_container">
+      <div class="sidebar">
+
+      </div>
+      <div class="main_content">
+        <div class="header">
+            
+        </div>
+        <div class="pages">
+             <div class="todo_main_container">
+
+                <div class="todo_wrapper">
+                    <div class="task_block_container">
+                         <div class="profile_session">
+                            <div class="profile_session_wrapper">
+                                <div class="image_container">
+                                <img src="./images/remix1.jpg" alt="">
+                            </div>
+                            <div class="profile_name">
+                                <p>Admin <span>1</span></p>
+                                <p class="p_name">Thiago Fabrice</p>
+                            </div>
+                            </div>
+                         </div>
+                         <div class="todo_block_div">
+                               <div class="add_block_container">
+                                  <input type="text" id="add_block" placeholder="Add todo block ">
+                                  <div class="plus_icon"><i class="bi bi-plus-lg"></i></div>
+                               </div>
+                               <div class="todo_blocks">
+                                 
+                               </div>
+                         </div>
+                    </div>
+                    <div class="todos">
+                           <div class="todos_wrapper">
+                               <div class="title_session">
+                                    <h2><span>update image </span>block</h2>
+                               </div>
+                               <div class="todo_input">
+                                 <div class="colors">
+                                    <div class="clrs1"></div>
+                                    <div class="clrs2"></div>
+                                    <div class="clrs3"></div>
+                                 </div>
+                                 <form type="submit" id="form">
+                                    <input type="text" id="todo_input_container" placeholder="what is your new task?">
+                                    <button id="addtask">add task</button>
+                                </form>
+                            </div>
+                               <div class="eachtask_container">
+                                   <div class="task">
+                                     <div id="task_div1">
+                                     <div class="clrs2"></div>
+                                     <div class="task_text">
+                                        update the image on the page
+                                     </div>
+                                     </div>
+
+                                    <div id="task_div2">
+                                        <div class="checkedbox">
+                                            <input type="checkbox" id="checkbox">
+                                        </div>
+                                        <div class="del_icon">
+                                            <i class="bi bi-trash"></i>
+                                        </div>
+                                    </div>
+
+                                   </div>
+                               </div>
+                           </div>
+                    </div>
+                </div>
+            
+            </div>
+
+        <div class="admin_add_container hidden" >
+            <div class="admin_wrapper">
+                <div class="admin_profile_container">
+                    <div class="image_part">
+                        <div class="img_container">
+                            <img id="uploaded_image" src="#" alt="image here">
+                            <input id="image_input" type="file" accept="images/*">
+                        </div>
+                        <label for="image_input" class="btn_addAdmin"> upload picture</label>
+                    </div>
+                    <div class="form_part">
+                        <form class="admin_add_form">
+                            <div id="name">
+                                <label for="username">username</label>
+                                <input type="text" id="username" placeholder="username" required>
+                            </div>
+                            <div id="password">
+                                <label for="password">password</label>
+                                <input type="password" id="passwd" required>
+                               <i class="bi bi-eye"></i>
+                            </div>
+                             <div id="id">
+                                <label for="AdminID">AdminID</label>
+                                <input type="text" id="AdminID" placeholder="username" value="" required>
+                            </div>
+                            <button id="generate">generate AdminID</button>
+                            <button id="addAdmin">add Admin</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="successContainer hidden">
+                    <div class="X-icon">
+                         <i class="bi bi-x-lg"></i>
+                    </div>
+                    <div class="text">
+                        Succesfully Added Admin
+                        <i class="bi bi-check2-circle"></i>
+                    </div>
+             </div>
+        </div>
+            
+        </div>
+
+        <div class="attendance_list_container">
+            <div class="each_admin">
+                <div class="admin_image_container">
+                   <img src="./images/remix1.jpg" alt="">
+                </div>
+                 <div class="admin_info">
+                    <div class="id">
+                        <p>AdminID</p>
+                        <h3>Devlap-123AP</h3>
+                    </div>
+                    <div class="usernameL">
+                        <p>UserName</p>
+                        <h3>Delutional Magician</h3>
+                    </div>
+                 </div>
+            </div>
+            <div class="each_admin">
+                <div class="admin_image_container">
+                   <img src="./images/remix1.jpg" alt="">
+                </div>
+                 <div class="admin_info">
+                    <div class="id">
+                        <p>AdminID</p>
+                        <h3>Devlap-123AP</h3>
+                    </div>
+                    <div class="usernameL">
+                        <p>UserName</p>
+                        <h3>Delutional Magician</h3>
+                    </div>
+                 </div>
+            </div>
+
+        </div>
+        </div>
+      </div>
+    </div>   
+    <script src="./jQuery.js"></script>
+    <script src="./fabrice.js"></script>
+</body>
+</html>
