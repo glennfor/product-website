@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Edit Product</title>
+    
+</head>
+<body>
+    
+    <div class="russ-side-nav-section flex-display">this is side bar</div>
+    <div class="russ-up-nav">
+        <div class="russ-main-nav flex-display">this is main nav</div>
+        <div class="russ-nav-category-box russ-main-nav ">
+        <ul class="russ-pdt-categories flex-display">
+            <a href="#rated">
+                <li>Top Rated</li>
+            </a><a href="#bmps">
+                <li>BPMs</li>
+            </a><a href="#dgs">
+                <li>Digital Scale</li>
+            </a><a href="#edcgs">
+                <li>ECDGs</li>
+            </a><a href="">
+                <li>Nebulizers</li>
+            </a><a href="">
+                <li>Thermometer</li>
+            </a>
+            <input type="search" name="search-pdt" placeholder="search product"><label for="search-pdt"><button class="russ-search-btn russ-edit-btn russ-show-btn"><span class="material-symbols-outlined">search</span></button></label>
+        </ul>
+    </div>
+</div>
+
+    <div class="upload-section russ-edit-section">
+        <div class="russ-edit-frame russ-main-container flex-display">
+            <div class="russ-edit-lside russ-pdt-box flex-display">
+                <img src="product-image/Digital_Scale/HN289/HN289_black_1.png" alt="">
+                <div class="russ-reviews">
+                    <span class="material-symbols-outlined">
+                        star_rate
+                    </span>
+                    <span class="material-symbols-outlined">
+                        star_rate
+                    </span>
+                    <span class="material-symbols-outlined">
+                        star_rate
+                    </span>
+                    <span class="material-symbols-outlined">
+                        star_rate
+                    </span>
+                    <span class="material-symbols-outlined">
+                        star_rate
+                    </span>
+                </div>
+                <h4>HN289_black_1</h4>
+            </div>
+            <div class="russ-edit-rside ">
+                <label for="price">Price</label><input type="text" name="price" class="russ-edit-price"><br><label for="name" class="russ-edit-name">Product Name</label><input type="text" name="name"><br><label for="description">Description</label><input class="russ-edit-descr" type="text" name="description" placeholder="50 characters max"><br><button class="russ-edit-btn russ-show-btn russ-updt-btn">Save Changes</button>
+            </div>
+            <div class="russ-edit-close"><span class="material-symbols-outlined">close</span></div>
+        </div>
+        </div>
+        <script src="productScript.js"></script>
+        
+</body>
+</html>
