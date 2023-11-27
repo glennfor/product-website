@@ -153,6 +153,7 @@
 }
 .large-image-container img{
     width: 0px;
+    transition: 0s;
 }
 .large-image-container img.visible{
    width: 100%;
