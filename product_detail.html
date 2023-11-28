@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- custom css link -->
+    <link rel="stylesheet" href="styles/product_page.css" />
+    <!-- link to bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <!-- link to google font quick sand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>product page</title>
+  </head>
+  <body>
+    <!-- body start -->
+    <!-- header/navbar here -->
+    <header>
+      <div class="container">
+        <div class="navigation__container">
+          <div class="logo">
+            <img src="assets/product-image/logo.png" alt="" />
+          </div>
+          <ul class="navigation__list">
+            <li class="navigation__element">
+              <a href="./thermometer.html">Home</a>
+            </li>
+            <li class="navigation__element">
+              <a href="./BP_monitor.html"
+                >Products <i class="bx bx-chevron-down"></i
+              ></a>
+            </li>
+            <li class="navigation__element">
+              <a href="./nebulizers.html">Blogs</a>
+            </li>
+            <li class="navigation__element">
+              <a href="./nebulizers.html">About Us</a>
+            </li>
+            <li class="navigation__element">
+              <a href="./nebulizers.html">Contact</a>
+            </li>
+          </ul>
+          <ul class="wishlist__cart__search">
+            <li class="wishlist">
+              <i class="badge"></i>
+              <i class="bi bi-heart"></i>
+            </li>
+            <li class="cart">
+              <i class="badge"></i>
+              <i class="bi bi-bag"></i>
+            </li>
+            <li class="search">
+              <i class="bx bx-search"></i>
+            </li>
+            <ul class="account__buttons">
+              <li class="login">
+                <button class="header__button">
+                  <i class="bx bx-user-circle"></i> Login
+                </button>
+              </li>
+              <li class="userAccount hide">
+                <img
+                  src=""
+                  alt=""
+                  class="profile__image"
+                  width="50px"
+                  height="50px"
+                  style="
+                    border-radius: 50%;
+                    background-color: var(--text-color);
+                  "
+                />
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- product (section 1) -->
+    <section id="product-purchase">
+      <div class="container">
+        <!-- product section container -->
+        <div class="product-container">
+          <div class="product-images">
+            <!-- large image -->
+            <div class="large-image-container">
+              <img
+                class="visible"
+                src="assets/images/products/Nebulizers/Smart_Nebulizer_D-77/Nubilizer-min.png"
+                alt=""
+              />
+              <img
+                src="assets/images/products/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_2-min.png"
+                alt=""
+              />
+              <img
+                src="assets/images/products/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_3-min.png"
+                alt=""
+              />
+              <img
+                src="assets/images/products/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_4-min.png"
+                alt=""
+              />
+              <button class="add-wishlist absolute">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+            </div>
+            <!-- small images -->
+            <div class="small-image-container">
+              <button class="small-image active">
+                <img
+                  src="assets/images/products/Nebulizers/Smart_Nebulizer_D-77/Nubilizer-min.png"
+                  alt=""
+                />
+              </button>
+              <button class="small-image">
+                <img
+                  src="assets/images/products/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_2-min.png"
+                  alt=""
+                />
+              </button>
+
+              <button class="small-image">
+                <img
+                  src="assets/images/products/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_3-min.png"
+                  alt=""
+                />
+              </button>
+              <button class="small-image">
+                <img
+                  src="assets/images/products/Nebulizers/Smart_Nebulizer_D-77/Nubilizer_4-min.png"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+          <!-- product description -->
+          <div class="product-description">
+            <h2>Nebulizers</h2>
+            <p class="description">
+              Breathe easier with our Nebulizer. Delivering medication as a fine
+              mist, it provides direct relief for respiratory conditions like
+              asthma and COPD.
+            </p>
+            <span class="discount"
+              ><p>10%</p>
+              off</span
+            >
+            <span class="product-price">
+              <span class="price">$360</span>
+              <span>$400</span>
+            </span>
+            <!-- review -->
+            <div class="review">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <a href="#reviews" class="review-count">441 Reviews</a>
+            </div>
+            <!-- color switcher -->
+            <div class="flex-col color">
+              <h2 class="small">Color</h2>
+              <div class="color-switcher flex-row">
+                <button>
+                  <p></p>
+                  <p></p>
+                </button>
+                <button>
+                  <p></p>
+                  <p></p>
+                </button>
+                <button>
+                  <p></p>
+                  <p></p>
+                </button>
+                <button>
+                  <p></p>
+                  <p></p>
+                </button>
+                <button class="active">
+                  <p></p>
+                  <p></p>
+                </button>
+              </div>
+            </div>
+            <!-- btn container -->
+            <div class="btn-container flex-row">
+              <button class="btn">Buy Now</button>
+              <button class="btn btn-border">Add To Cart</button>
+            </div>
+
+            <div class="accordion-container"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section one ends -->
+
+    <!-- section 2 product details start-->
+    <section id="product-details">
+      <div class="container">
+        <div class="product-details-tab-container">
+          <!-- tab buttons -->
+          <div class="product-tab-buttons">
+            <button class="tab-btn active" data-tab-target="#detail-info">
+              Detailed Information
+            </button>
+            <button class="tab-btn" data-tab-target="#dimension">
+              Dimensions
+            </button>
+            <button class="tab-btn" data-tab-target="#popular-config">
+              Popular Configuration
+            </button>
+          </div>
+
+          <!-- tab contents -->
+          <div class="tab-content-container">
+            <div class="tab-content active" id="detail-info">
+              <p>
+                User-friendly features like intuitive controls, adjustable
+                airflow settings, and noise reduction technology make nebulizers
+                easy to use and comfortable for individuals seeking respiratory
+                relief.
+              </p>
+              <p>
+                User-friendly features like intuitive controls, adjustable
+                airflow settings, and noise reduction technology make nebulizers
+                easy to use and comfortable for individuals seeking respiratory
+                relief.
+              </p>
+              <p>
+                User-friendly features like intuitive controls, adjustable
+                airflow settings, and noise reduction technology make nebulizers
+                easy to use and comfortable for individuals seeking respiratory
+                relief.
+              </p>
+            </div>
+            <div class="tab-content" id="dimension">
+              <p>
+                Compact and portable, nebulizers come in various sizes to suit
+                different needs. From handheld units to tabletop models, their
+                dimensions are designed for convenience and mobility.
+              </p>
+              <p>
+                Compact and portable, nebulizers come in various sizes to suit
+                different needs. From handheld units to tabletop models, their
+                dimensions are designed for convenience and mobility.
+              </p>
+              <p>
+                Compact and portable, nebulizers come in various sizes to suit
+                different needs. From handheld units to tabletop models, their
+                dimensions are designed for convenience and mobility.
+              </p>
+            </div>
+            <div class="tab-content" id="popular-config">
+              <p>
+                Handheld, tabletop, and portable nebulizer kits are the popular
+                configurations available, offering portability, stability, and
+                flexibility in managing respiratory conditions.
+              </p>
+              <p>
+                Handheld, tabletop, and portable nebulizer kits are the popular
+                configurations available, offering portability, stability, and
+                flexibility in managing respiratory conditions.
+              </p>
+              <p>
+                Handheld, tabletop, and portable nebulizer kits are the popular
+                configurations available, offering portability, stability, and
+                flexibility in managing respiratory conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section 2 product details end-->
+
+    <!-- section 3 related product start-->
+    <section id="related-products">
+      <div class="container">
+        <h2 class="header">Related Products</h2>
+        <div class="related-products-container">
+          <div class="related-product flex-col">
+            <div class="product-img">
+              <img src="assets/product-image/Nebulizers/C28P/C28P.png" alt="" />
+            </div>
+            <h2 class="product-name">C28P</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
+            <a href="" class="link"
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
+          </div>
+          <div class="related-product flex-col">
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/DuoBaby/DuoBaby.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">Nebulizer</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
+            <a href="" class="link"
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
+          </div>
+
+          <div class="related-product flex-col">
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/MicroAir_U100/MicroAir_U100.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">MicroAir_U100</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
+            <a href="" class="link"
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
+          </div>
+          <div class="related-product flex-col">
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/MicroAir_U100/MicroAir_U100_3.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">MicroAir_U100</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
+            <a href="" class="link"
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
+          </div>
+          <div class="related-product flex-col">
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/MicroAir_U100/MicroAir_U100_2.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">DuoBaby</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
+            <a href="" class="link"
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
+          </div>
+          <div class="related-product flex-col">
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/DuoBaby/DuoBaby2.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">DuoBaby</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
+            <a href="" class="link"
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
+          </div>
+          <div class="related-product flex-col">
+            <div class="product-img">
+              <img src="assets/product-image/Nebulizers/C28P/C28P.png" alt="" />
+            </div>
+            <h2 class="product-name">C28P</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
+            <a href="" class="link"
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
+          </div>
+          <div class="related-product flex-col">
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/DuoBaby/DuoBaby.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">Nebulizer</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
+            <a href="" class="link"
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
+          </div>
+
+          <div class="related-product flex-col">
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/MicroAir_U100/MicroAir_U100.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">MicroAir_U100</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
+            <a href="" class="link"
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
+          </div>
+          <div class="related-product flex-col">
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/MicroAir_U100/MicroAir_U100_3.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">MicroAir_U100</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
+            <a href="" class="link"
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
+          </div>
+          <div class="related-product flex-col">
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/MicroAir_U100/MicroAir_U100_2.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">DuoBaby</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
+            <a href="" class="link"
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
+          </div>
+          <div class="related-product flex-col">
+            <div class="product-img">
+              <img
+                src="assets/product-image/Nebulizers/DuoBaby/DuoBaby2.png"
+                alt=""
+              />
+            </div>
+            <h2 class="product-name">DuoBaby</h2>
+            <p class="product-desc">Breathe better, effortlessly.</p>
+            <a href="" class="link"
+              >Buy&nbsp;<i class="bi bi-chevron-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section 3 related products end-->
+
+    <!-- section reviews start-->
+    <section id="reviews">
+      <div class="container">
+        <div class="rating-review-container flex-col">
+          <h2 class="header">Ratings and Reviews</h2>
+
+          <div class="rating-stats flex-row">
+            <div>
+              <div>
+                <span class="large">4.5</span>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+              <p class="underline">
+                <span class="rating-count">141&nbsp;&nbsp;</span>Reviews
+              </p>
+            </div>
+            <button class="add-review btn">Write a review</button>
+            <!-- review form -->
+            <div class="add-review-container">
+              <form action="" class="add-review-form">
+                <span class="close-review"><i class="bi bi-x"></i></span>
+                <div class="user-details flex-row">
+                  <div class="letter"><p>T</p></div>
+                  <p class="name">Maja Salvador</p>
+                </div>
+                <h2>Rate your experince</h2>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <textarea
+                  name=""
+                  id="review-desc"
+                  cols="30"
+                  rows="10"
+                  placeholder="Describe your experience with us"
+                  required
+                ></textarea>
+                <button class="btn">Submit Review</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="rating-review-box flex-col">
+            <div class="user-details flex-row">
+              <div class="letter">T</div>
+              <p class="name">Maja Salvador</p>
+            </div>
+            <div class="rating-content flex-col">
+              <div class="rating">
+                <div>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="date-rated">September 14, 2023</p>
+              </div>
+              <p class="rating-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+                corrupti repellendus velit odit incidunt officiis ratione
+                tempora in! Nulla voluptatibus eos recusandae nobis quasi amet
+                deserunt veniam placeat suscipit ab?
+              </p>
+            </div>
+          </div>
+        </div>
+        <a href="" class="see-more link">See All Reviews</a>
+      </div>
+    </section>
+    <!-- section reviews end-->
+
+    <!-- section 5 privacy policy -->
+    <section id="privacy-policy">
+      <div class="container">
+        <h2 class="header">Law Enforecement</h2>
+        <br />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore,
+          consequatur. Soluta rerum neque mollitia non nesciunt eum eius, vel
+          itaque ullam ipsam quo aliquam. Quas nobis accusantium hic ullam
+          laborum earum dolor omnis excepturi dolorem dolore, natus ratione,
+          voluptates nam debitis! Debitis corrupti quidem adipisci ullam beatae
+          dolor, ad suscipit nostrum delectus tempore. Veniam quibusdam
+          reprehenderit commodi itaque, aperiam quae recusandae nobis ad
+          consequuntur cum, voluptatum labore cupiditate dolores nemo laboriosam
+          vel temporibus aliquam doloribus velit magnam alias eos. Fuga
+          recusandae officiis fugit porro animi debitis id expedita omnis
+          repellat laborum voluptas aliquam reiciendis quia adipisci libero
+          dignissimos rerum, autem iste similique numquam nobis doloribus velit
+          vitae.
+        </p>
+        <p>.</p>
+        <p>.</p>
+        Nisi ipsa veritatis repudiandae voluptatibus, praesentium, fuga eveniet
+        dolor nihil esse nulla eos? Id illo, ducimus harum enim rerum odio ipsa
+        explicabo soluta vero exercitationem qui unde doloremque voluptatum
+        dignissimos? Reprehenderit optio tempore similique ex, distinctio
+        excepturi minima consequatur, consectetur quidem ipsam, iste commodi
+        eveniet? Rem blanditiis sapiente labore quod ratione iusto, aliquam quos
+        expedita illum hic voluptas deleniti est cum officia distinctio, quae
+        corrupti minima in qui numquam voluptate soluta ex nesciunt. Placeat
+        fuga repellat magni, aliquid quos vitae laborum ratione debitis deserunt
+        ipsa in ducimus magnam blanditiis officiis molestias eaque amet.
+        <p>.</p>
+        <p>.</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+          natus architecto obcaecati doloremque esse cupiditate excepturi velit,
+          porro voluptas quas amet hic ad sequi laboriosam aperiam deserunt
+          ratione reiciendis nam odit! Officiis quidem dolore deleniti nihil
+          tempora asperiores, in rerum dignissimos consectetur distinctio nemo
+          nam autem nostrum animi vero! Accusamus, dolores aliquid, provident,
+          impedit ab delectus cupiditate sed similique voluptates voluptas totam
+          vel illum vero aut sint nihil atque corporis in? Odit blanditiis quo
+          doloremque mollitia sequi vero obcaecati, voluptatem minus dolor quam
+          rerum ipsum, dicta sint soluta magni adipisci quibusdam iure, illo
+          animi numquam a doloribus nobis aut. Porro?
+        </p>
+      </div>
+    </section>
+    <!-- section 5 privacy policy end-->
+
+    <!-- footer start -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-intro flex-col">
+            <div class="logo">
+              <img src="assets/product-image/logo.png" alt="" />
+            </div>
+            <form action="" class="flex-col">
+              <h3 class="bold">Subscribe To Our Newsletter</h3>
+              <div class="form-group flex-row">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  id="newsletter-email"
+                  required
+                />
+                <button type="submit" class="btn">Subscribe</button>
+              </div>
+            </form>
+            <div class="social-links">
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-whatsapp"></i></a>
+              <a href=""><i class="bi bi-messenger"></i></a>
+            </div>
+          </div>
+          <div class="footer-content flex-col">
+            <h3>Products</h3>
+            <ul class="flex-col">
+              <li><a href="">Blood Pressure monitor</a></li>
+              <li><a href="">Digital Scale</a></li>
+              <li><a href="">Electrocardiogram</a></li>
+              <li><a href="">Nebulizers</a></li>
+              <li><a href="">Thermometer</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-content flex-col">
+            <h3>Company</h3>
+            <ul class="flex-col">
+              <li><a href="">About Us</a></li>
+              <li><a href="">Blogs</a></li>
+              <li><a href="">Guides</a></li>
+              <li><a href="">Promotions</a></li>
+            </ul>
+          </div>
+          <div class="footer-content flex-col">
+            <h3>Support</h3>
+            <ul class="flex-col">
+              <li><a href="">Help Center</a></li>
+              <li><a href="">Customer Service</a></li>
+              <li><a href="">Shipping and Delivery</a></li>
+              <li><a href="">Order Tracking</a></li>
+            </ul>
+          </div>
+          <div class="footer-content contact flex-col">
+            <h3>Contact</h3>
+            <ul class="flex-col">
+              <li>
+                <a href="">Contact Us</a>
+              </li>
+              <li class="flex-row">
+                <i class="bi bi-envelope"></i>
+                <p>info@devlab.com</p>
+              </li>
+              <li class="flex-row">
+                <i class="bi bi-telephone"></i>
+                <p>237 652 902 345</p>
+              </li>
+              <li class="flex-row">
+                <i class="bi bi-geo-alt"></i>
+                <p>johannesburg south africa | mile 17 muea</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="privacy-policy flex-row">
+          <span>&copy; 2023 DevLab All rights reserved</span>
+          <div class="flex-grow">
+            <a href="">Terms Of Service |</a>
+            <a href="">Privacy Policy |</a>
+            <a href="">Sales Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
