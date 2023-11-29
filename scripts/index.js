@@ -75,8 +75,17 @@ $(document).ready(function () {
         const headerAndContainer=$('.header-main-container-section')
         const menuBarSection=$('.menu-bar-section');
         const menuBtn=$('.header-menu-button');
+        let isFirstClick=true;
+        
         menuBtn.on('click',()=>{
+            let delayTime=isFirstClick?300:0;
+            
             menuBarSection.toggleClass('active');
             headerAndContainer.toggleClass('menu-not-active');
+            setTimeout(function () {
+                menuBarSection.toggleClass('active-display-none');
+            }, delayTime);
+            isFirstClick=!isFirstClick;
+
         });
 });
