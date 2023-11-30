@@ -61,19 +61,27 @@ function close_edit(){
 //add product
 $('.russ-updt-btn').click(function(){
 var new_img=$('.upload-section img');
-var new_img_src=$('.upload-section .russ-edit-name').val();
+var new_img_src=$('.upload-section .russ-add-img-src').val();
+new_img.css('visibility','visible');
 new_img.attr('src',new_img_src);
-new_img.css('visibility','flex');
+$('.russ-add-img-text').html('click to<br>replace image');
+$('.russ-add-img-icn').text('edit');
 
 var new_pdt_price=$('.upload-section .russ-edit-price').val();
 var new_pdt_name=$('.upload-section .russ-edit-name').val();
-
-// console.log(new_pdt_name);
-// console.log(new_pdt_price);
+console.log(new_pdt_name);
+console.log(new_pdt_price);
+console.log(new_img_src);
 });
 
+//to add image from local disk
 
-//add new product
+// $('.russ-add-img-icn').click(function(){
+//     //to collect path of desired image from local drive
+//     $(".upload-section .russ-add-img-local[type='file']").trigger('click');
+//     new_img_src=$("upload-section .russ-add-img-local[type='file']").val();
+//     new_img.attr('src',new_img_src);
 
+// })
 
 
