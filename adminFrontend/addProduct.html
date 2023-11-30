@@ -9,63 +9,56 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="styles.css">
-    <title>Edit Product</title>
+    <title>Add-Product</title>
     
 </head>
-<body>
+<body style="background:var(--light-bg-grey)">
+    <div class="russ-bg-decor"style="background:"></div>
     
     <div class="russ-side-nav-section flex-display">this is side bar</div>
-    <div class="russ-up-nav">
-        <div class="russ-main-nav flex-display">this is main nav</div>
-        <div class="russ-nav-category-box russ-main-nav ">
+    <div class="russ-up-nav flex-display">
+        <!-- this main nav -->
+        <div class="russ-main-nav russ-show-nav flex-display"><div></div></div>
+        <!-- product-category-nav -->
+        <div class="russ-nav-category-box flex-display ">
         <ul class="russ-pdt-categories flex-display">
             <a href="#rated">
-                <li>Top Rated</li>
-            </a><a href="#bmps">
-                <li>BPMs</li>
+                <li class="russ-active-link" id="russ-rate-link">Top Rated</li>
+            </a><a href="#bpms">
+                <li id="russ-bpm-link">BPMs</li>
             </a><a href="#dgs">
-                <li>Digital Scale</li>
-            </a><a href="#edcgs">
-                <li>ECDGs</li>
-            </a><a href="">
-                <li>Nebulizers</li>
-            </a><a href="">
-                <li>Thermometer</li>
+                <li id="russ-dgs-link">Digital Scale</li>
+            </a><a href="#ecdgs">
+                <li id="russ-ecdgs-link">ECDGs</li>
+            </a><a href="#nebulizers">
+                <li id="russ-nebulizers-link">Nebulizers</li>
+            </a><a href="#thermometer">
+                <li id="russ-thermometer-link">Thermometer</li>
             </a>
-            <input type="search" name="search-pdt" placeholder="search product"><label for="search-pdt"><button class="russ-search-btn russ-edit-btn russ-show-btn"><span class="material-symbols-outlined">search</span></button></label>
+            <input type="search" name="search-pdt" placeholder="search product"><label for="search-pdt"><button class="russ-search-btn russ-show-btn"><span class="material-symbols-outlined">search</span></button></label>
         </ul>
     </div>
 </div>
 
-    <div class="upload-section russ-edit-section">
-        <div class="russ-edit-frame russ-main-container flex-display">
-            <div class="russ-edit-lside russ-pdt-box flex-display">
-                <img src="product-image/Digital_Scale/HN289/HN289_black_1.png" alt="">
-                <div class="russ-reviews">
-                    <span class="material-symbols-outlined">
-                        star_rate
-                    </span>
-                    <span class="material-symbols-outlined">
-                        star_rate
-                    </span>
-                    <span class="material-symbols-outlined">
-                        star_rate
-                    </span>
-                    <span class="material-symbols-outlined">
-                        star_rate
-                    </span>
-                    <span class="material-symbols-outlined">
-                        star_rate
-                    </span>
-                </div>
-                <h4>HN289_black_1</h4>
-            </div>
-            <div class="russ-edit-rside ">
-                <label for="price">Price</label><input type="text" name="price" class="russ-edit-price"><br><label for="name" class="russ-edit-name">Product Name</label><input type="text" name="name"><br><label for="description">Description</label><input class="russ-edit-descr" type="text" name="description" placeholder="50 characters max"><br><button class="russ-edit-btn russ-show-btn russ-updt-btn">Save Changes</button>
-            </div>
-            <div class="russ-edit-close"><span class="material-symbols-outlined">close</span></div>
+<div class="upload-section flex-display russ-edit-section">
+    <div class="russ-edit-frame  flex-display">
+        <div class="russ-edit-lside russ-pdt-box flex-display">
+            <div class="russ-edit-img-div flex-display"><span class="material-symbols-outlined flex-display russ-add-img-icn">add_a_photo</span><img src="product-image/Digital_Scale/HN289/HN289_black_1.png" alt=""></div>
+            <span class="russ-add-img-text"> click to add <br>image from your device</span>
+         <input type="text" placeholder="or paste image link from Drive">
         </div>
+        <div class="russ-edit-rside">
+            <label for="price">Price</label><input type="text" name="price" class="russ-edit-price"><br><label for="name">Product Name</label><input class="russ-edit-name" type="text" name="name" placeholder=" "><br><label for="description">Description</label><input id="russ-edit-descr" type="text" name="description" placeholder="50 characters max"><br>
+
+            <div class="russ-edit-checkbox-group flex-display">
+              <div class="russ-check-part flex-display"><input type="checkbox" name="bpms"><label for="bpms">BPMs</label><input type="checkbox" name="dgs"><label for="dgs">DGs</label><input type="checkbox" name="ecdgs"><label for="ecdgs">ECDGs</label></div>
+              <div class="russ-check-part flex-display"><input type="checkbox" name="nbls"><label for="nbls">NBLs</label><input type="checkbox" name="thermos"><label for="thermos">Thermos</label><input type="checkbox" name="new"><label for="new">new</label></div>
+            </div>
+
+            <button class="russ-show-btn russ-updt-btn ">add to site</button>
         </div>
+        <div class="russ-edit-close flex-display"><span class="material-symbols-outlined">close</span></div>
+    </div>
         <script src="productScript.js"></script>
         
 </body>
