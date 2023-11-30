@@ -9,32 +9,38 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="styles.css">
-    <title>Products</title>
+    <title>Product-detail</title>
 </head>
 <body>
 
     <div class="russ-side-nav-section flex-display">this is side bar</div>
-    <div class="russ-up-nav">
-        <div class="russ-main-nav flex-display">this is main nav</div>
-        <div class="russ-nav-category-box russ-main-nav ">
+    <div class="russ-up-nav flex-display">
+        <!-- this main nav -->
+        <div class="russ-main-nav russ-show-nav flex-display"><div></div></div>
+        <!-- product-category-nav -->
+        <div class="russ-nav-category-box flex-display ">
         <ul class="russ-pdt-categories flex-display">
             <a href="#rated">
-                <li>Top Rated</li>
-            </a><a href="#bmps">
-                <li>BPMs</li>
+                <li class="russ-active-link" id="russ-rate-link">Top Rated</li>
+            </a><a href="#bpms">
+                <li id="russ-bpm-link">BPMs</li>
             </a><a href="#dgs">
-                <li>Digital Scale</li>
-            </a><a href="#edcgs">
-                <li>ECDGs</li>
-            </a><a href="">
-                <li>Nebulizers</li>
-            </a><a href="">
-                <li>Thermometer</li>
+                <li id="russ-dgs-link">Digital Scale</li>
+            </a><a href="#ecdgs">
+                <li id="russ-ecdgs-link">ECDGs</li>
+            </a><a href="#nebulizers">
+                <li id="russ-nebulizers-link">Nebulizers</li>
+            </a><a href="#thermometer">
+                <li id="russ-thermometer-link">Thermometer</li>
             </a>
-            <input type="search" name="search-pdt" placeholder="search product"><label for="search-pdt"><button class="russ-search-btn russ-edit-btn russ-show-btn"><span class="material-symbols-outlined">search</span></button></label>
+            <input type="search" name="search-pdt" placeholder="search product"><label for="search-pdt"><button class="russ-search-btn russ-show-btn"><span class="material-symbols-outlined">search</span></button></label>
         </ul>
     </div>
 </div>
+<!-- fixed button to add new product -->
+<div class="russ-bg-decor"></div>
+<div class="russ-add-pdt flex-display"><a href="addProduct.html"><span class="material-symbols-outlined">add</span></a></div>
+
 <div class="russ-main-container flex-display">
     <div class="russ-pdt-container">
        
@@ -117,7 +123,7 @@
         </div>
         <h1 id="bpms">BPMs</h1>
             <h5>Blood Pressure Monitors</h5>
-        <div class="russ-pdt-line flex-display " >
+        <div class="russ-pdt-line flex-display " id="russ-bpms-line">
             
             <div class="russ-pdt-box flex-display">
                 <img src="product-image/Blood_Pressure_monitor/M2_intelli_IT/M2_intelli_IT_1.png" alt=""></img>
@@ -192,9 +198,9 @@
                 <button class="russ-edit-btn russ-pdt-btn"><span class="material-symbols-outlined">edit</span></button>
             </div>
         </div>
-        <h1 id="ecds">ECDGs</h1>
+        <h1 id="ecdgs">ECDGs</h1>
         <h5>Electrocardiograms</h5>
-    <div class="russ-pdt-line flex-display " >
+    <div class="russ-pdt-line flex-display " id="russ-ecdgs-line">
         
         <div class="russ-pdt-box flex-display">
             <img src="product-image/Blood_Pressure_monitor/M6-Comfort/M6-Comfort_1.png" alt=""></img>
@@ -272,7 +278,7 @@
     </div>
     <h1  id="dgs">DGs</h1>
     <h5>Digital scales</h5>
-<div class="russ-pdt-line flex-display ">
+<div class="russ-pdt-line flex-display " id="russ-dgs-line">
     
     <div class="russ-pdt-box flex-display">
         <img src="product-image/Digital_Scale/BF511/BF511_turquoise.png" alt=""></img>
@@ -342,7 +348,7 @@
             </span>
         </div>
         <h4>HN289_pink_1</h4>
-        <h6>ecdg</h6>
+        <h6>digital scale</h6>
         <h3>$8.00</h3>
         <button class="russ-edit-btn russ-pdt-btn"><span class="material-symbols-outlined">edit</span></button>
     </div>
@@ -352,7 +358,7 @@
 
 <h1 id="nebulizers">NBLs</h1>
 <h5>Nebulizers</h5>
- <div class="russ-pdt-line flex-display " >
+ <div class="russ-pdt-line flex-display " id="russ-nebulizers-line">
     
     <div class="russ-pdt-box flex-display">
         <img src="product-image/Nebulizers/MicroAir_U100/MicroAir_U100.png" alt=""></img>
@@ -385,8 +391,8 @@
                 star_rate
             </span>
             <span class="material-symbols-outlined"> -->
-                star_rate
-            </span>
+                <!-- star_rate
+            </span> -->
             <span class="material-symbols-outlined">
                 star_rate
             </span>
@@ -398,7 +404,7 @@
             </span>
         </div>
         <h4>DuoBaby</h4>
-        <h6>Nebulizers</h6>
+        <h6>nebulizers</h6>
         <h3>$22.00</h3>
         <button class="russ-edit-btn russ-pdt-btn"><span class="material-symbols-outlined">edit</span></button>
     </div>
@@ -508,7 +514,7 @@
 </div>
 
 
-    <div class="russ-edit-section">
+    <div class="russ-edit-section russ-edit-only">
         <div class="russ-edit-frame russ-main-container flex-display">
             <div class="russ-edit-lside russ-pdt-box flex-display">
                 <img src="product-image/Digital_Scale/HN289/HN289_black_1.png" alt="">
@@ -531,12 +537,53 @@
                 </div>
                 <h4>HN289_black_1</h4>
             </div>
-            <div class="russ-edit-rside ">
-                <label for="price">Price</label><input type="text" name="price" class="russ-edit-price"><br><label for="name" class="russ-edit-name">Product Name</label><input type="text" name="name"><br><label for="description">Description</label><input class="russ-edit-descr" type="text" name="description" placeholder="50 characters max"><br><button class="russ-edit-btn russ-show-btn russ-updt-btn">Save Changes</button>
+            <div class="russ-edit-rside">
+                <label for="price">Price</label><input type="text" name="price" class="russ-edit-price" placeholder="0.00"><br><label for="name">Product Name</label><input class="russ-edit-name" type="text" name="name" placeholder="name"><br><label for="description">Description</label><input id="russ-edit-descr" type="text" name="description" placeholder="50 characters max"><br><button class="russ-show-btn russ-updt-btn ">Save Changes</button>
             </div>
-            <div class="russ-edit-close"><span class="material-symbols-outlined">close</span></div>
+            <div class="russ-edit-close flex-display"><span class="material-symbols-outlined">close</span></div>
         </div>
+        <div class="russ-details-section">
+            <h1>Product Details</h1>
+            <table>
+                <tr>
+                    <td>Category</td>
+                    <td class="russ-det-category">BPM</td>
+                </tr>
+                <tr>
+                    <td>Inital date</td>
+                    <td>12-03-2019</td>
+                </tr>
+                <tr>
+                    <td>Age group</td>
+                    <td>10+</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas placeat veniam, consectetur laborum quos minima impedit voluptates excepturi doloribus itaque inventore <br></td>
+                </tr>
+            </table>
+            <h1>Product Performance</h1>
+            <table>
+                <tr>
+                    <td>Number sold</td>
+                    <td>12+ in the last month</td>
+                </tr>
+                <tr>
+                    <td>Rated</td>
+                    <td>4.0/5</td>
+                </tr>
+                <tr>
+                    <td>Scope</td>
+                    <td>10+ countries</td>
+                </tr>
+                <tr>
+                    <td>Future actions</td>
+                    <td>consectetur adipisicing elit. Voluptas placeat veniam, consectetur laborum quos minima impedit voluptates<br></td>
+                </tr>
+            </table>
+            <div class="russ-to-dashboard">go to dashboard <span>-></span></div>
         </div>
+     </div>
    
     </div>
 <!-- </div> -->
