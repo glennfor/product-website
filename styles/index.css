@@ -35,13 +35,23 @@
 }
 
 body{
-    padding: 0px 5%;
+    padding: 0px;
     margin: 0px;
     font-weight: var(--p-font-weight);
     color: var(--text-color);
     font-family: var(--font-family);
     position: relative;
     overflow-x: hidden;
+    background-color: var(--white);
+}
+
+.index__main__container{
+    padding: 0px 8%;
+}
+
+.hide__scroll{
+    overflow: hidden;
+    height: 100vh;
 }
 
 ul{
@@ -58,16 +68,33 @@ a{
     color: inherit;
 }
 
-.navigation__container{
-    padding: 10px 2%;
+.user__navigation__container{
+    padding: 10px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: 600;
-    width: 100%;
+    width: 100vw;
     position: sticky;
     top: 0px;
+    left: 0px;
     z-index: 99;
+    background-color: var(--white);
+    height: 80px;
+    margin-top: 20px;
+}
+
+.menu__button{
+    display: none;
+}
+
+.menu__button span{
+    width: 25px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--text-color);
+    display: block;
+    margin-bottom: 5px;
 }
 
 .wishlist__cart__search{
@@ -108,7 +135,7 @@ a{
 }
 
 .new__hero__image img{
-    width: min(90%, 700px);
+    width: min(100%, 700px);
     filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.603)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.307));
     margin-left: 20px;
 }
@@ -116,15 +143,32 @@ a{
 .hero__section{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
     padding: 10px;
-    border-radius: var(--box-border-radius);
     background-color: var(--light-bg-blue);
-    z-index: 2;
-   
+    height: 650px;
+    padding-top: 0px;
+    align-items: center;
 }
 
+.hero__buttons
+{
+    display: flex;
+    gap: 20px;
+}
+
+.hero__buttons a:first-child button{
+    color: var(--primary-blue);
+    background-color: transparent;
+    border: 2px solid var(--primary-blue);
+    width: max-content;
+    padding: 0px 30px;
+}
+
+.hero__buttons a:first-child button:hover{
+    color: var(--white);
+    background-color: var(--primary-blue);
+}
 .detail__to__product{
     width: 50%;
     padding: 2%;
@@ -153,11 +197,11 @@ button{
     font-family: var(--font-family);
 }
 
-.learn__more button{
+.hero__learn__more button{
     color: var(--light-bg-grey);
     background-color: var(--primary-blue);
-    height: 50px;
-    width: 175px;
+    height: 48px;
+    width: 150px;
     border-radius: var(--button-border-radius);
     font-family: var(--font-family);
     font-weight: 700;
@@ -165,36 +209,31 @@ button{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 75px;
+    margin-top: 30px;
 }
 
-.learn__more button:hover{
+.hero__learn__more button:hover{
     background-color: var(--button-hover-color);
 }
 
-.learn__more button span{
-    width: 50px;
+.hero__learn__more button span{
+   width: 30%; 
 }
 
-.learn__more button:hover svg{
+.hero__learn__more button:hover svg{
     width: 130%;
 }
 
-.learn__more .bx{
-    font-size: 20px;
-}
-
-.first__container{
+.index__first__container{
     background-color: var(--light-bg-blue);
-    border-radius: var(--box-border-radius);
-    margin-top: 20px;
+    margin-top: 0px;
     position: relative;
     overflow: hidden;
     max-height: 700px;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border-radius: var(--button-border-radius);
 }
 
-.first__container::before{
+.index__first__container::before{
     position: absolute;
     content: "";
     background: var(--primary-blue);
@@ -215,19 +254,16 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 2px;
 }
 
-.sign__up, .login{
+.sign__up{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 10px;
-    border-radius: var(--button-border-radius);  
-}
-
-.login{
-    background-color: var(--primary-blue);
+    border-radius: var(--button-border-radius);
+    background-color: var(--primary-blue);  
 }
 
 .navigation__element:hover .bx{
@@ -237,17 +273,22 @@ button{
 .header__button{
     font-weight: 700;
     background-color: transparent;
-    border: 1px solid var(--text-color);
-    color: var(--text-color);
     border-radius: var(--button-border-radius);
     padding: 10px;
-    color: var(--primary-blue);
     border: 2px solid var(--primary-blue);
     width: 125px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    color: var(--white);
+}
+
+.login .header__button{
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: max-content;
+    font-size: 16px;
 }
 
 .header__button .bx{
@@ -255,15 +296,20 @@ button{
 }
 
 .login .header__button{
-    color: var(--white);
+    color: var(--primary-blue);
 }
 
 .header__button:hover{
     background-color: var(--button-hover-color);
 }
 
+.login .header__button:hover{
+    background-color: transparent;
+    color: var(--button-hover-color);
+}
+
 .account__buttons{
-    gap: 0px;
+    gap: 10px;
 }
 
 .hide{
@@ -279,8 +325,8 @@ button{
     font-weight: 600;
     padding: 8px;
     position: absolute;
-    right: 50px;
-    bottom: 15px;
+    right: 45px;
+    bottom: 120px;
     border-radius: var(--box-border-radius);
 }
 
@@ -351,12 +397,16 @@ button{
     transition: .5s;
 }
 
+.product-name{
+    font-size: 20px;
+}
+
 .pressure__category{
     width: 65%;
 }
 
 .pressure__category a:before{
-    background-image: url(../product-image/Blood_pressure.webp);
+    background-image: url(../assets/images/products/Blood_pressure.webp);
 }
 
 .Thermometer__category{
@@ -364,7 +414,7 @@ button{
 }
 
 .Thermometer__category a::before{
-    background-image: url(../product-image/Thermometers.webp);
+    background-image: url(../assets/images/products/Thermometers.webp);
 }
 
 .DigitalScale__category{
@@ -372,7 +422,7 @@ button{
 }
 
 .DigitalScale__category a::before{
-    background-image: url(../product-image/Scales.webp);
+    background-image: url(../assets/images/products/Scales.webp);
 }
 
 div.Nebulisers__category, div.Electrocardiogram__category{
@@ -380,12 +430,12 @@ div.Nebulisers__category, div.Electrocardiogram__category{
 }
 
 div.Nebulisers__category a::before{
-    background-image: url(../product-image/Nebulizer_background.webp);
+    background-image: url(../assets/images/products/Nebulizer_background.webp);
     background-size: 140%;
 }
 
 div.Electrocardiogram__category a::before{
-    background-image: url(../product-image/Electrocardiogram_background.webp);
+    background-image: url(../assets/images/products/Electrocardiogram_background.webp);
     background-size: 140%;
 }
 
@@ -401,9 +451,25 @@ div.Nebulisers__category:hover a:before, div.Electrocardiogram__category:hover a
 }
 
 .latest__products h1{
-    font-size: 40px;
+    font-size: 32px;
     text-align: center;
-    margin-bottom: 50px;
+    position: relative;
+    width: max-content;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 80px;
+}
+
+.latest__products h1::before{
+    content: "";
+    position: absolute;
+    width: 70%;
+    bottom: -15px;
+    left: auto;
+    right: auto;
+    border-radius: 2px;
+    background-color: var(--primary-blue);
+    height: 5px;
 }
 
 .product__card{
@@ -424,12 +490,12 @@ div.Nebulisers__category:hover a:before, div.Electrocardiogram__category:hover a
 
 .link{
     display: flex;
-    gap: 8px;
+    gap: 0px;
     align-items: center;
     background-color: var(--primary-blue);
-    width: 100px;
+    width: 80px;
     color: var(--white);
-    height: 60px;
+    height: 45px;
     border-radius: var(--button-border-radius);
     padding: 0px 10px;
     font-size: 14px;
@@ -474,26 +540,27 @@ div.Nebulisers__category:hover a:before, div.Electrocardiogram__category:hover a
 }
 
 .swiper-button-next .bx, .swiper-button-prev .bx{
-    color: var(--white);
-    font-size: 24px;
-    background-color: var(--primary-blue);
-    padding: 10px 11px;
+    color: var(--primary-blue);
+    font-size: 36px;
+    background-color: var(--white);
+    padding: 5px 6px;
     border-radius: 50%;
     display: inline-block;
+    border: 2px solid var(--primary-blue);
 }
 
 .swiper-button-next:hover i, .swiper-button-prev:hover i{
-    background-color: var(--primary-blue);
+   border-color: var(--primary-blue); 
 }
 
 .swiper-button-prev, .swiper-button-next{
-    left: 10px;
+    left: 15px;
     position: absolute;
 }
 
 .swiper-button-next{
     left: auto;
-    right: 10px;
+    right: 15px;
 }
 
 .swiper-button-next:after, .swiper-button-prev:after{
@@ -502,45 +569,85 @@ div.Nebulisers__category:hover a:before, div.Electrocardiogram__category:hover a
 
 .approvals{
     width: 100%;
-    background-color: var(--primary-blue);
-    color: var(--white);
-    font-weight: 600;
-    font-size: 18px;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 16px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 20px 10px;
     margin-top: 50px;
     border-radius: var(--box-border-radius);
-    gap: 20px;
+    gap: 40px;
     height: 236px;
+    margin-top: -70px;
 }
 
 .approvals div{
-    width: 25%;
+    width: max(28%, 275px);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     row-gap: 20px;
-    height: 100%;
+    height: 300px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 20px;
+    z-index: 3;
+    background-color: var(--white);
+    border-radius: var(--button-border-radius);
+}
+
+.approvals div:hover{
+    background-color: var(--light-bg-blue);
+}
+
+.approvals .underlined__text{
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    width: max-content;
+}
+
+.underlined__text:before{
+  position: absolute;
+  bottom: -10px;
+  width: 40px;
+  border-radius: 2px;
+  background-color: var(--primary-blue);
+  height: 2px;
+  z-index: 0;
+  content: "";  
 }
 
 
 .approvals div svg{
-    background-color: var(--light-bg-blue);
-    width: 50px;
-    height: 50px;
+    background-color: var(--primary-blue);
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
+    padding: 10px;
 }
 
+.index__statistics{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin-top: 100px;
+    margin-bottom: 100px
+}
 
-.division{
-    background-color: var(--white);
-    width: 2px;
-    display: block;
-    border-radius: var(--button-border-radius);
-    height: 70%;
+.index__statistics div{
+   font-weight: 700;
+}
+
+.index__statistics h1{
+    font-size: 50px;
+    color: var(--primary-blue);
+    font-weight: 800;
+    margin-bottom: 8px;
 }
 
 .Trade__discount{
@@ -557,6 +664,8 @@ div.Nebulisers__category:hover a:before, div.Electrocardiogram__category:hover a
 
 .Trade__discount .product__image__discount{
     width: 50%;
+    display: flex;
+    align-items: center;
 }
 
 .product__image__discount img{
@@ -578,7 +687,7 @@ div.Nebulisers__category:hover a:before, div.Electrocardiogram__category:hover a
 }
 
 .real__price, .discounted__price{
-    font-size: 35px;
+    font-size: 28px;
 }
 
 .real__price{
@@ -590,10 +699,11 @@ div.Nebulisers__category:hover a:before, div.Electrocardiogram__category:hover a
     background-color: var(--primary-blue);
     border-radius: var(--button-border-radius);
     font-weight: 700;
-    padding: 20px; 
+    padding: 0px 20px; 
     display: block;
     margin: auto;
     margin-top: 20px;
+    height: 48px;
 }
 
 .Buy__now:hover{
@@ -602,51 +712,42 @@ div.Nebulisers__category:hover a:before, div.Electrocardiogram__category:hover a
 
 .count_down{
     color: var(--white-color);
-    margin-top: 40px;
     width: 350px;
     margin: auto;
+    margin-top: 100px;
 }
 
 .time_squares{
     display: flex;
-    gap: 15px;
+    gap: 8px;
     padding-left: 0px;
     align-items: center;  
     max-width: 430px;
     margin: auto;
-
+    justify-content: center;
 }
 
 .time_squares li{
     width: 70px;
-    height: 80px;
+    height: 70px;
     list-style: none;
-    background-color: var(--button-hover-color);
+    background-color: #a3c5f1;
     border-radius: 5px;
     text-align: center;
-    border: var(--primary-blue) 3px solid;
-    color: var(--white);
+    color: var(--text-color);
+    border: 2px solid var(--dark-grey);
 
-}
-
-.colored_in_green{
-    color: var(--primary-color);
-}
-
-.dark_division .regular_button{
-    box-shadow: none;
 }
 
 .value{
     display: block;
-    margin-top: 15px;
-    font-size: 32px;
+    margin-top: 10px;
+    font-size: 28px;
     font-weight: 800;
 }
 
 .time_property{
     font-size: 12px;
-    color: var(--time-property-color);
 }
 
 .color{
@@ -679,4 +780,282 @@ div.Nebulisers__category:hover a:before, div.Electrocardiogram__category:hover a
 
 .active__color{
     border-color: var(--primary-blue);
+}
+
+
+@media screen and (max-width: 1100px){
+    .index__main__container{
+        padding: 0 2%;
+    }
+
+    .user__navigation__container{
+        padding: 10px 2%;
+    }
+}
+
+@media screen and (max-width: 949px) {
+    .navigation__list{
+        display: none;
+    }
+
+    .account__buttons{
+        display: none;
+    }
+
+    .menu__button{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .user__navigation__container{
+        margin-top: 0px;
+        padding-left: 20px;
+    }
+
+    .index__main__container{
+        padding: 0px 1px;
+    }
+
+    .wishlist__cart__search{
+        padding-right: 20px;
+    }
+
+    .hero__section{
+        flex-direction: column;
+        height: max-content;
+        gap: 50px;
+    }
+
+    .hero__section>div{
+        width: 100%;
+    }
+
+
+    .change__image__view{
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .index__first__container{
+        max-height: max-content;
+    }
+
+    .index__first__container::before{
+        right: -200px;
+        height: 300px;
+        bottom: -100px;
+        width: 180%;
+    }
+
+    .new__hero__image img{
+        margin: 0px;
+    }
+
+    .detail__to__product{
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .approvals{
+        margin-top: 300px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .approvals div{
+        width: 90%;
+    }
+
+    .approvals div svg{
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero__section .product__name{
+        font-size: 45px;
+    }
+
+    .index__statistics{
+        font-size: 12px;
+        flex-wrap: wrap;
+        margin-top: 300px;
+    }
+
+    .index__statistics h1{
+        font-size: 30px;
+    }
+
+    .index__statistics div{
+        width: 50%;
+    }
+
+    .product__category{
+        justify-content: center;
+    }
+
+    .product__category>div{
+        width: 95%;
+        height: 200px;
+    }
+
+    .product__category>div h2{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .latest__products h1{
+        font-size: 22px;
+    }
+    
+    .Trade__discount{
+        flex-direction: column;
+        border-radius: var(--button-border-radius);
+    }
+
+    .Trade__discount>div{
+        width: 100%;
+    }
+
+    div.color__variants{
+        width: max-content;
+        flex-direction: row;
+    }
+
+    .Trade__discount .product__image__discount{
+        width: 100%;
+    }
+
+    .color{
+        width: 25px;
+        height: 25px;
+    }
+
+    .Trade__discount>div.Trade__discount__details{
+        margin-top: -30px;
+        margin-bottom: 20px;
+    }
+
+    .Trade__discount__details h1{
+        font-size: 25px;
+        padding: 0px 10px;
+    }
+
+    .time_squares{
+        width: 250px;
+    }
+
+    .product__swiper{
+        padding-left: 20px;
+        overflow-x: visible;
+    }
+
+    .swiper-button-next .bx, .swiper-button-prev .bx{
+        padding: 0px;
+        border: transparent;
+    }
+
+    .swiper-button-next{
+        right: 8px;
+    }
+}
+
+.navigation__mobile{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    background-color: var(--white);
+    z-index: 98;
+    display: flex;
+    padding: 20px 20px 0px;
+}
+
+
+.body__of__navigation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 300px;
+    box-sizing: content-box;
+}
+
+.body__of__navigation .menu__item{
+    width: 90%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px ;
+    border-bottom: 2px solid rgb(214, 214, 214);
+}
+
+.body__of__navigation .menu__item:last-child{
+    border-bottom-color: transparent;
+}
+
+.body__of__navigation .menu__item .bx{
+    font-size: 30px;
+    color: var(--primary-blue);
+}
+
+.body__of__navigation .menu__item a:hover{
+    color: var(--primary-blue);
+}
+
+.body__of__navigation>a{
+    width: 80%;
+}
+
+.body__of__navigation a button{
+font-weight: 700;
+background-color: transparent;
+border-radius: var(--button-border-radius);
+padding: 10px;
+border: 2px solid var(--primary-blue);
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+color: var(--primary-blue);
+height: 50px;
+font-size: 18px;
+}
+
+.body__of__navigation a button.signUp__mobile, .body__of__navigation a button.login__mobile:hover{
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.body__of__navigation a button.signUp__mobile:hover{
+    background-color: var(--button-hover-color);
+}
+
+
+.clicked.menu__button span:first-child{
+    transform: rotate(45deg);
+    translate: 0px 7px;
+}
+
+.clicked.menu__button span:nth-child(2){
+    opacity: 0;
+    transition: .6s;
+}
+
+.clicked.menu__button span:last-child{
+    transform: rotate(-45deg);
+    translate: 0px -6px;
+}
+
+.hidden__menu{
+    left: -100vw;
 }
