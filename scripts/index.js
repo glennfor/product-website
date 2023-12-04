@@ -25,12 +25,26 @@ $(document).ready(function () {
         chevronIcon.toggleClass('rotated');
         chevronIcon.toggleClass('bi-chevron-up');
     });
+
+    // display the corresponding content in the container
+    const HandleChangingContainerContent =()=>{
+        let ClickedSubmenuDataType=null;
+        let previousClicked=null;
+        $('.menu-bar-content-list>li>ul>li').on('click', function(){
+            previousClicked=ClickedSubmenuDataType;
+            ClickedSubmenuDataType=$(this).data('container-content-type');
+            $(`.${ClickedSubmenuDataType}-container`).addClass('active')
+            if(previousClicked!=ClickedSubmenuDataType){
+                $(`.${previousClicked}-container`).removeClass('active');
+            }
+        });
+    }
     $('.order-button').on('click', function() {
         const orderType = $(this).data('order-type');
-        $('.orders-container').removeClass('active-table');
+        $('.orders-container-dashboard').removeClass('active-table');
         $(`#${orderType}-orders`).addClass('active-table');
     });
-    let ctx = $('#ordersChart')[0].getContext('2d');
+    let ctx = $('#ordersChart')[0].getContext('2d')
         let initialDataBar = {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             datasets: [{
@@ -54,7 +68,7 @@ $(document).ready(function () {
             type: 'line',
             data: initialDataLine
         });
-
+        updateChart('line');
         // Attach click event handlers to the buttons
         $('#actualgraph').on('click', function () {
             updateChart('line');
@@ -65,27 +79,27 @@ $(document).ready(function () {
         });
 
         // Function to update the chart type
+        // Function to update the chart type
         function updateChart(type) {
             ordersChart.destroy();  // Destroy the existing chart
             ordersChart = new Chart(ctx, {
                 type: type,
-                data: type='bar'?initialDataLine:initialDataBar
+                data: (type === 'bar') ? initialDataBar : initialDataLine
             });
         }
+
         const headerAndContainer=$('.header-main-container-section')
         const menuBarSection=$('.menu-bar-section');
-        const menuBtn=$('.header-menu-button');
-        let isFirstClick=true;
-        
+        const menuBtn=$('.header-menu-button');        
         menuBtn.on('click',()=>{
-            let delayTime=isFirstClick?300:0;
-            
             menuBarSection.toggleClass('active');
             headerAndContainer.toggleClass('menu-not-active');
-            setTimeout(function () {
-                menuBarSection.toggleClass('active-display-none');
-            }, delayTime);
-            isFirstClick=!isFirstClick;
-
         });
+        const windowsWidth=$(window).width();
+        alert(windowsWidth)
+        if(windowsWidth<=1000){
+            menuBarSection.addClass('active');
+            headerAndContainer.addClass('menu-not-active');
+        }
+        HandleChangingContainerContent();
 });

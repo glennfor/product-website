@@ -15,10 +15,11 @@
 }
 *{
     box-sizing: border-box;
+    transition: all 0.4s ease-out;
 }
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     width: 100vw;
     overflow: hidden;
     color: var(--text-color);
@@ -27,6 +28,7 @@ body {
     width: 100%;
     height: auto;
     display: flex;
+    position: relative;
 }
 /* Menu bar starts */
 .menu-bar-section{
@@ -38,11 +40,23 @@ body {
     border-right:1px solid #03244b;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transform: translateX(0);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-out 0.2;
+}
+@media screen and (max-width:1000px) {
+    .menu-bar-section{
+        position: absolute;
+        width: 50%;
+        z-index: 0;
+    }
+}
+@media screen and (max-width:500px) {
+    .menu-bar-section{
+        width: 100%;
+    }
 }
 .menu-bar-section.active{
     transform: translateX(-100%);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-out 0.2s;
 
 }
 .menu-bar-section.active-display-none{
@@ -58,22 +72,32 @@ body {
     padding: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap:6px ;
     max-height: 70px;
     overflow: hidden;
 }
-.company-logo>span{
+.company-logo>div:first-child{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.company-logo>div:first-child>span{
     display: inline-block;
     color: var(--primary-blue);
     font-family: fantasy;
     font-size: 1rem;
 
 }
-.company-logo>img{
+.company-logo>div:first-child>img{
     display: inline-block;
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+.company-logo>div:last-child{
+    display: none;
 }
 .menu-bar-content{
    overflow-y: scroll;
@@ -90,34 +114,44 @@ body {
     flex-direction: column;
     row-gap: 1px;
     list-style: none;
-    margin: 0;
+    margin: auto;
+    position: relative;
     padding: 4px 10px 4px 4px;
 
 }
 .menu-bar-content-list>li{
+    position: relative;
     width: 100%;
+    display: block;
     cursor: pointer;
 }
 .menu-bar-content-list>li>ul {
-    will-change: transform;
-    background-color: #e4eefd;
-    padding: 10px 6px 10px 6px;
+    position: relative;
+    will-change: max-height;
+    background-color: white;
     list-style: none;
-    transition: max-height 0.5s ease-in-out;
-    transition-delay: 0;
-    max-height: 0;
+    transition: max-height 0.5s;
+    padding: 5px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
     overflow: hidden;
     cursor: pointer;
 }
-.menu-bar-content-list>li.listOpen>ul {
-    max-height: 1000px
-}
+
 .menu-bar-content-list>li.listOpen>div {
-    background-color: #e4eefd;
+   
     background-color: #1967d2;
 }
 .menu-bar-content-list>li>ul>li{
-    padding: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color:var(--light-bg-blue);
+    margin-left: 0;
+    display: block;
+}.menu-bar-content-list>li>ul>li:hover{
+    background-color: var(--primary-blue);
 }
 .menu-bar-content-list>li>div{
     display: flex;
@@ -129,7 +163,7 @@ body {
 .menu-bar-content-list>li>div>div:first-child>span{
     font-weight: 700;
     font-size: 0.9rem;
-    padding-left: 15px;
+    padding-left: 5px;
 }
 
 .menu-bar-content-list>li>div>div:last-child>.chevronIcon.rotated{
@@ -139,7 +173,11 @@ body {
 
 /* Header Starts Here */
 .header-main-container-section{
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 80%;
+    transition: all 0.5s ease-in;
     background-color: #f8f9fa;
 }
 .header-main-container-section.menu-not-active{
@@ -154,6 +192,7 @@ body {
     overflow: hidden;
 }
 .admin-dashboard-header-main-content {
+ 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -217,7 +256,7 @@ body {
     border-radius: 50%;
     top: 0px;
     right: -5px;
-    background-color: blue;
+    background-color: rgb(255, 0, 221);
 }
 .message{
     position: relative;
@@ -239,7 +278,7 @@ body {
     top: 0px;
     right: -5px;
     z-index: 3;
-    background-color: blue;
+    background-color: rgb(255, 0, 221);
 }
 .profile{
     display: flex;
@@ -276,6 +315,7 @@ body {
     max-height:  87vh;
     overflow-y: scroll;
     padding: 10px 15px;
+
     
 }
 .container::-webkit-scrollbar{
@@ -283,12 +323,13 @@ body {
 }
 .dashboard-container{
     padding: 10px 10px 50px 10px;
-    display: flex;
+    display: none;
     flex-direction: column;
     row-gap: 10px;
-    display: none;
 }
-
+.dashboard-container.active{
+    display: flex;
+}
 .section1>div>span:last-child{
     font-size: 0.6em;
 }
@@ -315,11 +356,6 @@ body {
     background-color: var(--light-bg-blue);
     border-radius: var(--box-border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-image:url(../assets/images/inventory-logo.svg);
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: bottom;
-    background-size: 40px;
 }
 
 .section1 > div:hover{
@@ -400,6 +436,7 @@ body {
     flex-direction: column;
     gap: 5px;
     flex: 1;
+    max-width: 100%;
 }
 .salesbuy-text{
     display: flex;
@@ -418,7 +455,7 @@ body {
 .salebuy-orders-table-container{
    
 }
-.orders-container {
+.orders-container-dashboard {
     max-width: 100%;
     overflow: auto;
     display: none;
@@ -458,11 +495,28 @@ body {
     flex: 1;
     padding: 15px;
 }
+@media screen and (max-width:1068px){
+    .charts-section{
+        width: 100%;
+    }
+}
 .chart-heading-button{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     min-height: 6em;
+}
+.charts-container{
+    flex: 1;
+    width: 100%;
+}
+.charts{
+    width: 100%;
+    height: 100%;
+}
+#ordersChart {
+    width: 100%;
+    height: auto; /* To maintain the aspect ratio */
 }
 .chart-heading-button button{
     background-color: var(--primary-blue);
@@ -483,13 +537,13 @@ body {
 
 /* Orders container starts Here */
 
-.orders-container{
+.orders-status-container{
     display: none;
 }
-.orders-container.active{
+.orders-status-container.active{
     display: block;
 }
-.orders{
+.orders-status{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
