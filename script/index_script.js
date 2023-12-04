@@ -28,7 +28,7 @@ var varx = setInterval(function() {
 
 
 $(document).ready(function() {
-  const Array = ['./assets/images/products/Digital_Scale/HN289/HN289_black_1.png', './assets/images/products/Digital_Scale/HN289/HN289_pink_1.png', './assets/images/products/Digital_Scale/HN289/HN289_ocean_blue_1.png', 'product-image/Digital_Scale/HN289/HN289_turquoise_1.png']
+  const Array = ['./assets/images/products/Digital_Scale/HN289/HN289_black_1.png', './assets/images/products/Digital_Scale/HN289/HN289_pink_1.png', './assets/images/products/Digital_Scale/HN289/HN289_ocean_blue_1.png', './assets/images/products/Digital_Scale/HN289/HN289_turquoise_1.png']
   const image = $('.Discount__product__image')[0];
   $('.color').click(function() {
     $('.color').removeClass('active__color');
@@ -42,7 +42,7 @@ const handleMediaQuery = () => {
     swipe.params.slidesPerView = 1.5;
     swipe.update();
   } else {
-    swipe.params.slidesPerView = 3.5; // Set the desired number of slides per view
+    swipe.params.slidesPerView = 3.5;
     swipe.update();
   }
 };
@@ -55,7 +55,8 @@ $(document).ready(function() {
   menu.click(function(){
     $(this).toggleClass('clicked');
     mobileMenu.toggleClass('hidden__menu');
-    mainContainer.toggleClass('hide__scroll')
+    mainContainer.toggleClass('hide__scroll');
+    $('.user__navigation__container').toggleClass('nav__shadow')
   })
   handleMediaQuery();
 });

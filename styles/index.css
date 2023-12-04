@@ -335,6 +335,10 @@ button{
     color: var(--text-color);
 }
 
+button.left, button.right{
+    background-color: var(--white);
+}
+
 .right:hover .bx, .left:hover .bx{
     color: var(--primary-blue);
 }
@@ -1042,8 +1046,8 @@ font-size: 18px;
 
 
 .clicked.menu__button span:first-child{
-    transform: rotate(45deg);
     translate: 0px 7px;
+    transform: rotate(45deg);
 }
 
 .clicked.menu__button span:nth-child(2){
@@ -1052,10 +1056,14 @@ font-size: 18px;
 }
 
 .clicked.menu__button span:last-child{
+    translate: 0px -7px;
     transform: rotate(-45deg);
-    translate: 0px -6px;
 }
 
 .hidden__menu{
     left: -100vw;
+}
+
+.nav__shadow{
+    box-shadow: 0 4px 10px rgba(20, 100, 255, .1);
 }
