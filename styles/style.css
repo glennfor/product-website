@@ -133,6 +133,26 @@ button{
     
 }
 
+.bi.bi-bell{
+    position: relative;
+    font-size: 30px;
+    
+}
+
+.bell{
+    color: black;
+    font-size: 15px;
+    position: absolute;
+    color: white;
+    background-color: rgb(255, 45, 45);
+    border-radius: 50%;
+    width: 16px;
+    padding-left: 3px;
+    top: -10px;
+    left: 15px;
+
+}
+
 .container-left3 a{
     display: flex;
     flex-direction: column;
@@ -238,7 +258,7 @@ padding-right: 40%;
 
 .container-right2{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 20%;
     
 }
@@ -253,7 +273,7 @@ padding-right: 40%;
 }
 
 .container-right2 i:hover{
-    color: rgb(206, 204, 204);
+    color: rgb(168, 165, 165);
     ;
 }
 
