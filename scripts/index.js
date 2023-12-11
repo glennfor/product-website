@@ -1,5 +1,8 @@
-var mylink = document.querySelectorAll("#link");
-mylink.addEventListener("click", function(event){
-    event.preventDefault();
-    mylink.classlist.add("clicked");
-});
+var NewCustomer = document.getElementsByClassName("container-left4");
+var NewChat = document.getElementById("chatpage");
+
+function newfunction(){
+
+}
+
+NewCustomer.addEventListener("clicked", newfunction());
