@@ -34,6 +34,10 @@
     border-radius: 4px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     padding: 0px;
     margin: 0px;
@@ -691,11 +695,12 @@ div.Nebulisers__category:hover a:before, div.Electrocardiogram__category:hover a
 }
 
 .real__price, .discounted__price{
-    font-size: 28px;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .real__price{
-    text-decoration: line-through var(--primary-blue);
+    text-decoration: line-through red;
 }
 
 .Buy__now{

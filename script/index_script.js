@@ -1,8 +1,8 @@
-let countDownDate = new Date("Dec 25 2023 00:00:00").getTime();
-var Values = $(".value");
+let countDownDate = new Date('Dec 25 2023 00:00:0').getTime();
+var Values = $('.value');
 var i;
 
-var varx = setInterval(function() {    
+var varx = setInterval(function() {  
     let now = new Date().getTime();
     let distance = countDownDate - now;
   
@@ -65,8 +65,3 @@ $(window).resize(function() {
   handleMediaQuery();
 });
 
-
-
-$(document).ready(function(){
-  
-})
