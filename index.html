@@ -28,7 +28,7 @@
 		<link rel="stylesheet" href="./styles/index.css" />
 	</head>
 
-	<body>
+	<body id="main__body">
         <nav class="user__navigation__container">
             <div class="logo">
                 <img src="./assets/images/Niche_logo.svg" alt="" width="70px">
@@ -55,11 +55,11 @@
                      <i class="badge"></i>
                     <i class="bx bx-shopping-bag"></i>
                 </li>
-                <li class="search">
+                <li class="search" onclick="OpenSearch();">
                     <i class="bx bx-search"></i>
                 </li>
                 <li class="menu__button">
-                    <span></span><span></span><span></span>
+                    <span style="background-color: black;"></span><span style="background-color: black;"></span><span style="background-color: black;"></span>
                 </li>
                 <ul class="account__buttons">
                     <li class="login">
@@ -303,9 +303,8 @@
                     <img class="Discount__product__image" src="./assets/images/products/Digital_Scale/HN289/HN289_black_1.png" alt="">
                 </div>
                 <div class="Trade__discount__details">
-                    <h1>GET 50% DISCOUNT ON THE HN289 DIGITAL SCALE</h1>
-                    <span class="real__price">$800</span>&nbsp;&nbsp; <span class="discounted__price">$400</span>
-                    <button class="Buy__now">BUY NOW</button>
+                    <h1>Deal of the Week</h1>
+                    <h3 style="font-weight: 500;padding: 0px 15px;">Enjoy up to <b style="color: #1967d2;">50% off</b> and free delivery on our Digital Scale</h3>
                     <h3 style="margin-top: 50px; color: red;">Deal Ends in</h3>
                     <ul class="time_squares">
                         <li><span class="value" id="days">- -</span><span class="time_property">days</span></li>
@@ -313,13 +312,155 @@
                         <li><span class="value" id="min">- -</span><span class="time_property">min</span></li>
                         <li><span class="value" id="sec">- -</span><span class="time_property">sec</span></li>
                     </ul>
+                    <button class="Buy__now" style="margin-top: 30px;">View Details</button>
+                    
                 </div>
             </section>
     
             <!--section 5-->
-            <section></section>    
-           
+            <section class="blog__section">
+                <h1 class="heading">Our Latest News</h1>
+                <h3 style="text-align: center; margin: -40px 0px 50px; ">Dive into our latest thoughts and insights on our products </h3>
+                <div class="index__main__blogContainer">
+                    <div class="blog__main">
+                        <img src="https://dlmedishop.droitlab.com/wp-content/uploads/2022/03/blog01.webp" alt="">
+                        <div class="blog__info">
+                            <span class="blog__date__time">
+                                <i class="bx bx-calendar"></i>
+                                December 14, 2023
+                            </span>
+                            <h2 class="blog__title">
+                                The DNA and Blood
+                            </h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo voluptatibus, quo vel doloribus quis numquam eaque. Labore dolore non tempora.</p>
+                        </div>
+                        <button class="read__more">Read More</button>
+                    </div>
+                    <div class="blog__main">
+                        <img src="https://dlmedishop.droitlab.com/wp-content/uploads/2021/03/blog02.jpg" alt="">
+                        <div class="blog__info">
+                            <span class="blog__date__time">
+                                <i class="bx bx-calendar"></i>
+                                November 12, 2023
+                            </span>
+                            <h2 class="blog__title">
+                                A Proper Way to BP Problems
+                            </h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo voluptatibus, quo vel doloribus quis numquam eaque. Labore dolore non tempora.</p>
+                        </div>
+                        <button class="read__more">Read More</button>
+                    </div>
+                    <div class="blog__main">
+                        <img src="https://dlmedishop.droitlab.com/wp-content/uploads/2021/03/blog06.webp" alt="">
+                        <div class="blog__info">
+                            <span class="blog__date__time">
+                                <i class="bx bx-calendar"></i>
+                                November 2, 2023
+                            </span>
+                            <h2 class="blog__title">
+                                Why Medications
+                            </h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo voluptatibus, quo vel doloribus quis numquam eaque. Labore dolore non tempora.</p>
+                        </div>
+                        <button class="read__more">Read More</button>
+                    </div>
+                </div>
+            </section>   
         </div>
+
+         <!-- footer start -->
+         <div class="product-detail-page">
+            <footer id="footer">
+                <div class="container">
+                  <div class="footer-container">
+                    <div class="footer-intro flex-col">
+                      <div class="logo">
+                        <img src="assets/images/Niche_logo.svg" alt="" />
+                      </div>
+                      <form action="" class="flex-col">
+                        <h3 class="bold">Subscribe To Our Newsletter</h3>
+                        <div class="form-group flex-row">
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            id="newsletter-email"
+                            required
+                          />
+                          <button type="submit" class="btn">Subscribe</button>
+                        </div>
+                      </form>
+                      <div class="social-links">
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-whatsapp"></i></a>
+                        <a href=""><i class="bi bi-messenger"></i></a>
+                      </div>
+                    </div>
+                    <div class="footer-content flex-col">
+                      <h3>Products</h3>
+                      <ul class="flex-col">
+                        <li><a href="">Blood Pressure monitor</a></li>
+                        <li><a href="">Digital Scale</a></li>
+                        <li><a href="">Electrocardiogram</a></li>
+                        <li><a href="">Nebulizers</a></li>
+                        <li><a href="">Thermometer</a></li>
+                      </ul>
+                    </div>
+          
+                    <div class="footer-content flex-col">
+                      <h3>Company</h3>
+                      <ul class="flex-col">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Blogs</a></li>
+                        <li><a href="">Guides</a></li>
+                        <li><a href="">Promotions</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-content flex-col">
+                      <h3>Support</h3>
+                      <ul class="flex-col">
+                        <li><a href="">Help Center</a></li>
+                        <li><a href="">Customer Service</a></li>
+                        <li><a href="">Shipping and Delivery</a></li>
+                        <li><a href="">Order Tracking</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-content contact flex-col">
+                      <h3>Contact</h3>
+                      <ul class="flex-col">
+                        <li>
+                          <a href="">Contact Us</a>
+                        </li>
+                        <li>
+                          <i class="bi bi-envelope"></i>
+                          <p>info@devlab.com</p>
+                        </li>
+                        <li>
+                          <i class="bi bi-telephone"></i>
+                          <p>237 652 902 345</p>
+                        </li>
+                        <li>
+                          <i class="bi bi-geo-alt"></i>
+                          <p>johannesburg south africa | mile 17 muea</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="privacy-policy flex-row">
+                    <span>&copy; 2023 DevLab All rights reserved</span>
+                    <div class="flex-grow">
+                      <a href="">Terms Of Service |</a>
+                      <a href="">Privacy Policy |</a>
+                      <a href="">Sales Terms</a>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+        </div>
+  <!-- footer end -->
 
          <!--mobile menu-->
         <div class="navigation__mobile hidden__menu">
@@ -368,6 +509,15 @@
                 <a href="login.html">
                     <button class="signUp__mobile">Sign Up</button>
                 </a>
+            </div>
+        </div>
+
+        <!--search view-->
+        <div class="index__main__search__container">
+            <div class="sub__container">
+                <button class="close__search" onclick="CloseSearch();"><i class="bx bx-x"></i></button>
+                <input type="text" id="main__search" placeholder="Type keyword here">
+                <button class="search__site"><i class="bx bx-search"></i></button>
             </div>
         </div>
 

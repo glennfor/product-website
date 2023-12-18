@@ -52,10 +52,12 @@ $(document).ready(function() {
   const menu= $('.menu__button').eq(0)
   const mobileMenu = $('.navigation__mobile').eq(0)
   const mainContainer = $('.index__main__container').eq(0)
+  const mainBody = $('#main__body');
   menu.click(function(){
     $(this).toggleClass('clicked');
     mobileMenu.toggleClass('hidden__menu');
     mainContainer.toggleClass('hide__scroll');
+    mainBody.toggleClass('hide__scroll');
     $('.user__navigation__container').toggleClass('nav__shadow')
   })
   handleMediaQuery();
@@ -64,4 +66,16 @@ $(document).ready(function() {
 $(window).resize(function() {
   handleMediaQuery();
 });
+
+function OpenSearch(){
+  const SearchContainer = $('.index__main__search__container').eq(0);
+  const SearchInput = $('#main__search');
+  SearchContainer.addClass('searchContainerAnimate');
+  SearchInput.focus();
+}
+
+function CloseSearch(){
+  const SearchContainer = $('.index__main__search__container');
+  SearchContainer.removeClass('searchContainerAnimate');
+}
 
