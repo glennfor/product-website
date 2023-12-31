@@ -1,0 +1,384 @@
+
+
+
+button{
+    border: transparent;
+    outline: none;
+}
+
+.chat-container{
+    display: none;
+    width: 100%;
+    background-color: green;
+    float: right;
+    padding: 20px 20px;
+    padding-bottom: 0;
+    gap: 2%;
+    margin-top: 10vh;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(206, 204, 204);
+    
+    
+}
+
+.chat-container.active{
+    display: flex;
+}
+
+.container-left::-webkit-scrollbar {
+    width: 0.5em; /* Adjust the width as needed */
+  }
+
+  /* Style the scrollbar handle */
+  .container-left::-webkit-scrollbar-thumb {
+    background-color: black; /* Change the color as needed */
+  }
+
+.container-left{
+    background-color: white;
+    width: 25%;
+    padding-top: 2%;
+    height: 85vh;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    
+
+}
+
+
+.container-left1{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    padding-left: 2%;
+}
+.container-left1 img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.customer-messages{
+    overflow: auto;
+    height: 75%;
+    
+}
+
+
+.customer-messages::-webkit-scrollbar {
+    width: 0em; /* Adjust the width as needed */
+  }
+
+.admin{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-left2{
+    width: 100%;
+    padding-left: 2%;
+}
+
+.container-left2 input{
+    width: 95%;
+    margin: auto;
+    margin-top: 5%;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(206, 204, 204);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+    
+    
+}
+
+.container-left2 input[type="search"] {
+    caret-color: #4169E1;
+    font-size: 13px;
+    padding-left: 5%;
+  }
+
+
+.container-left2 input::placeholder{
+    padding-left: 5px;
+    line-height: normal;
+    color: white;
+}
+
+.container-left3{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+    justify-content: center;
+    
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+    
+
+
+    
+}
+
+.container-left3 a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    flex: 1;
+    align-self: center;
+    padding-bottom: 5%;
+    justify-content: center;
+    
+    
+}
+
+.container-left3 a span{
+    align-self: center;
+}
+
+.container-left3 a i{
+    align-self: center;
+    font-size: 23px;
+    color: #0f5cbb;
+}
+
+.bi.bi-telephone{
+padding-right: 40%;
+}
+
+.container-left3 a:hover{
+    
+}
+
+.container-left3 a:active{
+    color: green;
+    border-bottom: 1.5px solid #0f5cbb;
+}
+
+.message-time{
+    color: #0f5cbb;
+    font-size: 12px;
+}
+
+.container-left4{
+    padding-left: 2%;
+    display: flex;
+    margin-top: 8%;
+    align-items: center;
+    gap: 5%;
+    margin: 0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-bottom: 1px solid rgb(123, 118, 118);
+    transition: 0.5s;
+}
+
+.container-left4:hover{
+    background-color: rgb(206, 204, 204);
+    cursor: pointer;
+}
+
+.customer{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    
+}
+
+.container-left41{
+    display: flex;
+    flex-direction: column;
+    padding-right: 5%;
+    gap: 5px;
+}
+
+.name{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.container-right{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 75%;
+    padding-top: 2%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 5%;
+    height: 10vh;
+    padding-left: 3%;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 3%;
+}
+
+.container-right2{
+    display: flex;
+    justify-content: space-between;
+    gap: 20%;
+    
+}
+
+.container-right2 i{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 25px;
+ 
+}
+
+.container-right2 i:hover{
+    color: rgb(206, 204, 204);
+    ;
+}
+
+.active{
+    color: #0f5cbb;
+}
+
+
+
+.container-right1 img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.container-right1{
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    
+}
+
+.right-a{
+    padding-top: 4%;
+    display: flex;
+    gap: 10px;
+    margin-left: 25%;
+    margin-right: 2%;
+}
+
+.chat-messages{
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 0em; /* Adjust the width as needed */
+  }
+
+  /* Style the scrollbar handle */
+  .chart-messages::-webkit-scrollbar-thumb {
+    background-color: rgb(123, 118, 118); /* Change the color as needed */
+  }
+
+ .chat-text1{
+    background-color: #0f5cbb;
+    padding: 5px 5px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.text2{
+    background-color: rgb(206, 204, 204);
+    padding: 5px 5px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.time{
+    color: rgb(141, 137, 137);
+    align-self: flex-end;
+    margin-left: 81%;
+    margin-top: 2%;
+}
+
+.right-b{
+    padding-top: 4%;
+    display: flex;
+    gap: 10px;
+    margin-left: 2%;
+    margin-right: 25%;
+   
+
+}
+
+.time1{
+    color: #0f5cbb;
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.chat-message-content{
+    
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+
+}
+
+.chat-message-content input{
+    width: 75%;
+    border-radius: 15px; 
+    border: none;
+    height: 6vh;
+    padding-left: 5%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.chat-message-content i{
+   
+    color: #0f5cbb;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+@media screen and (max-width: 750px) {
+
+    .container-right{
+        display: none;
+    }
+
+    .container-left{
+        width: 100%;
+        
+    }
+
+    .container{
+        padding: 0;
+    }
+
+
+    .container-left4{
+        font-size: 25px;
+    }
+    
+}

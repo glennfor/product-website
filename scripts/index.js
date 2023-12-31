@@ -27,10 +27,13 @@ $(document).ready(function () {
     });
 
     // display the corresponding content in the container
+    $('.dashboard-container').addClass('active');
     const HandleChangingContainerContent =()=>{
+        
         let ClickedSubmenuDataType=null;
         let previousClicked=null;
         $('.menu-bar-content-list>li>ul>li').on('click', function(){
+            $('.dashboard-container').removeClass('active');
             previousClicked=ClickedSubmenuDataType;
             ClickedSubmenuDataType=$(this).data('container-content-type');
             $(`.${ClickedSubmenuDataType}-container`).addClass('active')
@@ -90,14 +93,16 @@ $(document).ready(function () {
 
         const headerAndContainer=$('.header-main-container-section')
         const menuBarSection=$('.menu-bar-section');
-        const menuBtn=$('.header-menu-button');        
+        const menuBtn=$('.header-menu-button');  
+        menuBarSection.addClass('active');  
+        headerAndContainer.addClass('menu-not-active');    
         menuBtn.on('click',()=>{
+            $('#menu-bar-btn-close').toggleClass('active')
+            $('#menu-bar-btn-open').toggleClass('not-active')
             menuBarSection.toggleClass('active');
             headerAndContainer.toggleClass('menu-not-active');
         });
-        const windowsWidth=$(window).width();
-        alert(windowsWidth)
-        if(windowsWidth<=1000){
+        if ($(window).width()<=1000) {
             menuBarSection.addClass('active');
             headerAndContainer.addClass('menu-not-active');
         }
