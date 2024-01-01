@@ -38,16 +38,16 @@ button{
     
 }
 
-.container-left::-webkit-scrollbar {
+.chat-container-left::-webkit-scrollbar {
     width: 0.5em; /* Adjust the width as needed */
   }
 
   /* Style the scrollbar handle */
-  .container-left::-webkit-scrollbar-thumb {
+  .chat-container-left::-webkit-scrollbar-thumb {
     background-color: black; /* Change the color as needed */
   }
 
-.container-left{
+.chat-container-left{
     background-color: white;
     width: 30%;
     padding-top: 2%;
@@ -58,40 +58,40 @@ button{
 }
 
 
-.container-left1{
+.chat-container-left1{
     display: flex;
     align-items: center;
     gap: 5%;
     padding-left: 2%;
 }
-.container-left1 img{
+.chat-container-left1 img{
     height: 40px;
     width: 40px;
     border-radius: 50%;
 }
 
-.customer-messages{
+.chat-customer-messages{
     overflow: auto;
     height: 75%;
     
 }
 
 
-.customer-messages::-webkit-scrollbar {
+.chat-customer-messages::-webkit-scrollbar {
     width: 0em; /* Adjust the width as needed */
   }
 
-.admin{
+.chat-admin{
     display: flex;
     flex-direction: column;
 }
 
-.container-left2{
+.chat-container-left2{
     width: 100%;
     padding-left: 2%;
 }
 
-.container-left2 input{
+.chat-container-left2 input{
     width: 95%;
     margin: auto;
     margin-top: 5%;
@@ -105,20 +105,20 @@ button{
     
 }
 
-.container-left2 input[type="search"] {
+.chat-container-left2 input[type="search"] {
     caret-color: #4169E1;
     font-size: 13px;
     padding-left: 5%;
   }
 
 
-.container-left2 input::placeholder{
+.chat-container-left2 input::placeholder{
     padding-left: 5px;
     line-height: normal;
     color: white;
 }
 
-.container-left3{
+.chat-container-left3{
     display: flex;
     justify-content: space-around;
     margin-top: 5%;
@@ -139,7 +139,7 @@ button{
     
 }
 
-.bell{
+.chat-bell{
     color: black;
     font-size: 15px;
     position: absolute;
@@ -153,7 +153,7 @@ button{
 
 }
 
-.container-left3 a{
+.chat-container-left3 a{
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -167,11 +167,11 @@ button{
     
 }
 
-.container-left3 a span{
+.chat-container-left3 a span{
     align-self: center;
 }
 
-.container-left3 a i{
+.chat-container-left3 a i{
     align-self: center;
     font-size: 23px;
     color: #0f5cbb;
@@ -181,21 +181,21 @@ button{
 padding-right: 40%;
 }
 
-.container-left3 a:hover{
+.chat-container-left3 a:hover{
     
 }
 
-.container-left3 a:active{
+.chat-container-left3 a:active{
     color: green;
     border-bottom: 1.5px solid #0f5cbb;
 }
 
-.message-time{
+.chat-message-time{
     color: #0f5cbb;
     font-size: 12px;
 }
 
-.container-left4{
+.chat-container-left4{
     padding-left: 2%;
     display: flex;
     margin-top: 8%;
@@ -208,33 +208,33 @@ padding-right: 40%;
     transition: 0.5s;
 }
 
-.container-left4:hover{
+.chat-container-left4:hover{
     background-color: rgb(206, 204, 204);
     cursor: pointer;
 }
 
-.customer{
+.chat-customer{
     height: 40px;
     width: 40px;
     border-radius: 50%;
     
 }
 
-.container-left41{
+.chat-container-left41{
     display: flex;
     flex-direction: column;
     padding-right: 5%;
     gap: 5px;
 }
 
-.name{
+.chat-name{
     display: flex;
     justify-content: space-between;
 }
 
 
 
-.container-right{
+.chat-container-right{
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -244,7 +244,7 @@ padding-right: 40%;
 
 }
 
-.head{
+.chat-headRight{
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -256,14 +256,14 @@ padding-right: 40%;
     padding-bottom: 3%;
 }
 
-.container-right2{
+.chat-container-right2{
     display: flex;
     justify-content: space-evenly;
     gap: 20%;
     
 }
 
-.container-right2 i{
+.chat-container-right2 i{
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -272,31 +272,31 @@ padding-right: 40%;
  
 }
 
-.container-right2 i:hover{
+.chat-container-right2 i:hover{
     color: rgb(168, 165, 165);
     ;
 }
 
-.active{
+.chat-active{
     color: #0f5cbb;
 }
 
 
 
-.container-right1 img{
+.chat-container-right1 img{
     height: 40px;
     width: 40px;
     border-radius: 50%;
 }
 
-.container-right1{
+.chat-container-right1{
     display: flex;
     justify-content: space-between;
     gap: 10%;
     
 }
 
-.right-a{
+.chat-right-a{
     padding-top: 4%;
     display: flex;
     gap: 10px;
@@ -318,7 +318,7 @@ padding-right: 40%;
     background-color: rgb(123, 118, 118); /* Change the color as needed */
   }
 
- .text{
+ .chat-text{
     background-color: #0f5cbb;
     padding: 5px 5px;
     border-top-right-radius: -30%;
@@ -327,7 +327,7 @@ padding-right: 40%;
 
 }
 
-.text2{
+.chat-text2{
     background-color: rgb(206, 204, 204);
     padding: 5px 5px;
     border-top-right-radius: -30%;
@@ -335,14 +335,14 @@ padding-right: 40%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.time{
+.chat-time{
     color: rgb(141, 137, 137);
     align-self: flex-end;
     margin-left: 81%;
     margin-top: 2%;
 }
 
-.right-b{
+.chat-right-b{
     padding-top: 4%;
     display: flex;
     gap: 10px;
@@ -352,7 +352,7 @@ padding-right: 40%;
 
 }
 
-.time1{
+.chat-time1{
     color: #0f5cbb;
     align-self: flex-start;
     margin-left: 10%;
@@ -397,21 +397,21 @@ padding-right: 40%;
 
 @media screen and (max-width: 750px) {
 
-    .container-right{
+    .chat-container-right{
         display: none;
     }
 
-    .container-left{
+    .chat-container-left{
         width: 100%;
         
     }
 
-    .container{
+    .chat-container{
         padding: 0;
     }
 
 
-    .container-left4{
+    .chat-container-left4{
         font-size: 25px;
     }
     
