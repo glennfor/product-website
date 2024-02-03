@@ -1,38 +1,93 @@
 //hide main nav on scroll down
-var previous_scroll_position = $(window).scrollTop();
-$(window).scroll(function () {
-  var main_nav = $(".russ-main-nav");
-  var category_nav = $(".russ-nav-category-box");
-  var current_scroll_position = $(this).scrollTop();
-  if (current_scroll_position <= 0) {
-    main_nav.removeClass("russ-show-nav");
-  }
-  if (current_scroll_position > previous_scroll_position) {
-    main_nav.removeClass("russ-show-nav");
-  } else {
-    main_nav.addClass("russ-show-nav");
-    category_nav.css("top", "0");
-  }
-  previous_scroll_position = current_scroll_position;
-});
+// var previous_scroll_position = $(window).scrollTop();
+// $(window).scroll(function () {
+//   var main_nav = $(".russ-nav-category-box");
+//   // var category_nav = $(".russ-nav-category-box");
+//   var current_scroll_position = $(this).scrollTop();
+//   if (current_scroll_position <= 0) {
+//     main_nav.add("russ-show-nav");
+//   }
+//   if (current_scroll_position > previous_scroll_position) {
+//     main_nav.removeClass("russ-show-nav");
+//   } else {
+//     main_nav.addClass("russ-show-nav");
+//     // category_nav.css("top", "0");
+//   }
+//   previous_scroll_position = current_scroll_position;
+// });
+
+const loader_container=$(".loader-container");
+const container=$(".container");
+$(window).on("load",()=>{
+  loader_container.addClass("hide");
+  container.addClass("visible");
+})
 
 //for search when clicked
 var search_btn = $(".russ-search-btn");
 var search_input = $(".russ-nav-category-box input");
 search_btn.click(function () {
-  search_input.css({ width: "150px", height: "30px", "padding-left": "10px" });
+  search_input.css({ width: "150px", height: "30px", padding_left: "10px" });
   search_btn.css("margin-left", "0px");
 });
-//whnen fixed add-btn  is clicked
-var fixed_add_btn = $(".russ-add-pdt");
+//show three pdts next
+var rst_container=$(".rst-container");
+var show1=rst_container.children(".rst-show").eq(0);
+var show2=rst_container.children(".rst-show").eq(1);
+var show3=rst_container.children(".rst-show").eq(2);
+
+
+//span of three pdts
+
+
+var prev_index=0;
+$(".rst-show").on("click", function() {
+
+  var rst_show_active=$(this);
+  $(this).parents(".rst-container").children(".rst-show").removeClass("active-show");
+  rst_show_active.addClass("active-show");
+  // alert($(this).attr("data-value"));
+  var pdt_line_view=$(this).parents(".russ-pdt-line");
+  var span3=pdt_line_view.children(".russ-three-pdt");
+  // alert(pdt_line_view.attr("data-value"));
+  span3.removeClass("russ-show-three-pdt");
+ 
+  span3.each(function(){
+    if($(this).attr("data-value")==rst_show_active.attr("data-value")){
+      var span_index=$(this).attr("data-value");
+      if(span_index<prev_index){
+      $(this).addClass("animate-span-slide-left");
+      }
+      else{
+      $(this).addClass("animate-span-slide-right");
+      }
+
+      $(this).addClass("russ-show-three-pdt");
+    }
+   
+    prev_index=span_index;
+    
+  })
+
+
+})
+
+
+
 
 //action to edit product after edit-btn is clicked
 $(".russ-pdt-box").on("click", function () {
-  var img_in_edit = $(this).children("img").attr("src");
+  $(".container").css("background","var(--light-bg-grey")
+  var img_in_edit = $(this).children(".rus-img-box").children("img").attr("src");
   var name_in_edit = $(this).children("h4").clone().text();
   var pdt_in_edit_rev = $(this).children(".russ-reviews").clone().html();
 
   $(".russ-edit-lside h4").text(name_in_edit);
+
+  var pdt_in_edit = $(this);
+  var price_plh=pdt_in_edit.children("h3").text();
+  $(".russ-edit-price").attr("placeholder", price_plh);
+  $(".russ-edit-name").attr("placeholder",pdt_in_edit.children("h4").text());
   $(".russ-edit-lside img").attr("src", img_in_edit);
   $(".russ-edit-lside .russ-reviews").html(pdt_in_edit_rev);
   $(".russ-pdt-container").css("display", "none");
@@ -42,26 +97,28 @@ $(".russ-pdt-box").on("click", function () {
     width: "80%",
     height: "fit-content",
   });
-  var pdt_in_edit = $(this);
-  $(".russ-edit-only .russ-updt-btn").click(function () {
-    //to actually change the name after update
-    pdt_in_edit.children("h4").text($(".russ-edit-only .russ-edit-name").val());
-    pdt_in_edit.children("h3").text("$" + $(".russ-edit-only .russ-edit-price").val());
+  
+  $("#russ-change-btn").click(function () {
+    //change the name after update
+    pdt_in_edit
+      .children("h4")
+      .text($(".russ-edit-section .russ-edit-name").val());
+    pdt_in_edit
+      .children("h3")
+      .text("$" + $(".russ-edit-section .russ-edit-price").val());
     console.log(pdt_in_edit.children("h3").text());
-    // //scroll to section of edited pdt
-    // var scroll_to=img_in_edit.parent('h1').attr('id');
-    // console.log(scroll_to);
-    // $(this).parent('a').attr('href',scroll_to);
     close_edit();
+
   });
 });
 
 //close edit-product-section
-$(".russ-edit-only .russ-edit-close").click(close_edit);
+$(".russ-edit-section .russ-edit-close").click(close_edit);
 
 function close_edit() {
+  $(".russ-pdt-container").css("display", "flex");
   $(".russ-edit-section").css("display", "none");
-  $(".russ-pdt-container").css("display", "block");
+  $(".container").css("background","white");
 }
 
 //add product
@@ -106,18 +163,15 @@ $(".russ-add-btn").click(function () {
 });
 
 //responsive
-$("#russ-show-cat-resp").on("click",function(){
+$("#russ-show-cat-resp").on("click", function () {
   $(".russ-nav-category-box").addClass("russ-nav-visible");
-  
-})
-
+});
 
 //to add image from local disk
 
-$('.russ-add-img-icn').on("click",function(){
-    //to collect path of desired image from local drive
-    $(".upload-section .russ-add-img-local[type='file']").trigger('click');
-    new_img_src=$("upload-section .russ-add-img-local[type='file']").val();
-    new_img.attr('src',new_img_src);
-
-})
+$(".russ-add-img-icn").on("click", function () {
+  //to collect path of desired image from local drive
+  $(".upload-section .russ-add-img-local[type='file']").trigger("click");
+  new_img_src = $("upload-section .russ-add-img-local[type='file']").val();
+  new_img.attr("src", new_img_src);
+});
